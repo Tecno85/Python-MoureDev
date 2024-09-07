@@ -1,2 +1,1 @@
-![Icono Python](./assets/img/python_icon.png)
-
+Tiempo: 2:24
