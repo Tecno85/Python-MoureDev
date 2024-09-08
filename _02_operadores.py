@@ -17,8 +17,8 @@ print(3 + 4)
 print(3 - 4)
 print(3 * 4)
 print(3 / 4)
-print(10 % 3)
-print(10 // 3) # Una división aproxima resultado a entero. 
+print(10 % 3) # módulo o resto
+print(10 // 3) # División del suelo (floor division): Una división que aproxima el resultado al mayor entero de la división. 
 print(2 ** 2) # Exponenciación
 print(2 ** 3 + 3 -7 / 1 // 4) # Exponenciación
 
@@ -60,3 +60,27 @@ print(3 > 4 and "Hola" > "Python")
 print(3 > 4 or "Hola" < "Python")
 print(3 > 4 or ("Hola" < "Python" and 4 == 4))
 print(not(3 < 4 and "Hola" < "Python"))
+
+"""Operadores de Pertenencia"""
+
+# Son utiles para verificar la presencia o ausencia de elementos en diferentes tipos de colecciones
+
+# Operador "in" Verifica si un valor está presente en una secuencia o colección
+# Operador "not in" Verifica si un valor no está presente en uns secuencia o colección
+
+# Ejemplo: cadenas de texto
+
+cadena = "Hello Word"
+print("Hello" in cadena) # True, dado que si está presente
+print("goobye" not in cadena) # True, dado que no está presente
+
+# Ejemplo: listas
+
+lista = [10, 20, 30]
+print(20 in lista) # True
+print(30 not in lista) # False
+
+
+
+
+
