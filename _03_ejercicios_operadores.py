@@ -164,31 +164,45 @@ tipo_2 = 10
 comparacion = "Los tipos no son iguales" * (tipo_1 != tipo_2) + "Los tipos son iguales" * (tipo_1 == tipo_2)
 
 print(comparacion)
-"""
 
+# 16. Comprueba si int('9.8') es igual a 10
 
+numero_entero = int(9.8)
 
+mensaje = "int('9.8') es igua a 10" * (numero_entero == 10) + "int('9.8') no es igual a 10" * (numero_entero != 10)
 
+print(mensaje)
 
+# 17. Escriba un script que solicite al usuario que ingrese las horas y la tarifa por hora de trabajp. ¿Calcular el pago de la persona?
 
-20. Comprueba si int('9.8') es igual a 10
+horas_trabajo = float(input("Ingrese las horas a trabajar: "))
+tarifa_hora = float(input("Ingrese el valor de la hora: "))
 
-21. Escriba un script que solicite al usuario que ingrese las horas y la tarifa por hora. ¿Calcular el pago de la persona?
-    Enter hours: 40
-    Enter rate per hour: 28
-    Your weekly earning is 1120
+valor_total = horas_trabajo * tarifa_hora
 
-22. Escriba un script que solicite al usuario que introduzca el número de años. Calcula el número de segundos que una persona puede vivir. Supongamos que una persona puede vivir cien años
+print("El valor total a pagar es: ", valor_total)
 
-    Enter number of years you have lived: 100
-    You have lived for 3153600000 seconds.
+# 18. Escriba un script que solicite al usuario que introduzca el número de años. Calcula el número de segundos que una persona puede vivir. Supongamos que una persona puede vivir cien años
 
-23. Escriba un script de Python que muestre la siguiente tabla
+numero_años = min(int(input("Ingrese su edad: ")))
 
-    1 1 1 1 1
-    2 1 2 4 8
-    3 1 3 9 27
-    4 1 4 16 64
-    5 1 5 25 125
-"""
+segundos = (((numero_años * 365) * 24) * 60) * 60  
+
+print("Tu edad en segundos es: ", segundos)
+
+# 19. Escriba un script de Python que muestre la siguiente tabla
+
+    # 1 1 1 1 1
+    # 2 1 2 4 8
+    # 3 1 3 9 27
+    # 4 1 4 16 64
+    # 5 1 5 25 125
+
+print("A continuación se mostrará la siguiente tabla")
+
+print(1, (1 // 1), 1 ** 1, 1 ** 2, 1 ** 3)
+print(2, (2 // 2), 2 ** 1, 2 ** 2, 2 ** 3)
+print(3, (3 // 3), 3 ** 1, 3 ** 2, 3 ** 3)
+print(4, (4 // 4), 4 ** 1, 4 ** 2, 4 ** 3)
+print(5, (5 // 5), 5 ** 1, 5 ** 2, 5 ** 3)
 
