@@ -145,7 +145,7 @@ numero_final = "Par" * (numero % 2 == 0) + "Impar" * (numero %2 != 0)
 
 print(f"El número ingresado es {numero} y es un número {numero_final}") 
 
-# En la línea 146, se usó un f-string o Cadena Formateada, esta nos pemite interpolar variables directamente en la cadena. Dentro de las llaves {} podemos colocar variables o expresiones, y Python las sustituye por su valor cuando imprimas la cadena. 
+# En la línea 146, se usó un f-string(formatted string literal) o Cadena Formateada, esta nos pemite interpolar(insertar) variables directamente en la cadena. Dentro de las llaves {} podemos colocar variables o expresiones, y Python las sustituye por su valor cuando imprimas la cadena. 
 
 # 15. Compruebe si la división del suelo de 7 por 3 es igual al valor int convertido de 2,7.
 
