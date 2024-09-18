@@ -1,3 +1,6 @@
+
+![pythopn](./assets/img/python_chat.webp)
+
 # _`print()`_
 
 `print()` permite controlar cómo se separan los elementos que imprimes mediante el uso de los parámetros sep y end.

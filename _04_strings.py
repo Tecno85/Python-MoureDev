@@ -93,6 +93,11 @@ print(salto) # Pto
 
 """Métodos"""
 
+language = "python"
+example = " Hello Python "
+example_1 = "Hello Python"
+variable_2 = "thirty_days_of_python"
+
 print(language.capitalize()) # Primera letra la convierte a mayúscula
 print(language.upper()) # Convierte el string a mayúscula
 print(language.count("n")) # Cuenta el numero de veces que está presente una letra en una palabra
@@ -101,8 +106,19 @@ print("1".isnumeric()) # Muestra que si
 print(language.lower()) # Convierte la variable en minúscula
 print(language.upper().isupper()) # True
 print(language.lower().isupper()) # False - .isupper confirma si es mayúscula
-print(language.startswith("py")) # compara la letra con que comienza un string y dice True o False
+print(language.startswith("py")) # Comprueba si la cadena comienza un string o letra especificada y devuelve un True or False
+print(language.endswith("on")) # Comprueba si la cadena termina un string o letra especificada y devuelve un True or False
 print(language.replace("python", "JavaScript")) # Reemplaza la subcadena con una dada
+print(example.strip()) # Elimina todos los carácteres dados comenzando desde el principio y el final de la cadena
+print(example_1.strip("Python")) # Imprime "Hello" eliminando la primera palabra o string
+print(variable_2.isidentifier()) # Comprueba si hay un identificador válido: comprueba si una cadena es un nombre de variable válido. Estos inician con letras minúsculas o guión bajo.
+
+
+# método join()
+list = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+result = " # ".join(list) # El método join() toma un string como delimitador (en este caso " # ", que incluye un hash y un espacio) y une los elementos de la lista en una única cadena, separándolos con ese delimitador. "Devuelve una cadena concatenada"
+print(result)
+
 
 texto = "Hola, mundo"
 posicion = texto.find("mundo")
