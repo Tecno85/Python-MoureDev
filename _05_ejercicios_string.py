@@ -233,3 +233,39 @@ print(new_sentence_2)
 # 34. Utilice una secuencia de escape de tabulación para escribir las siguientes líneas.
 # Name      Age     Country   City
 # Asabeneh  250     Finland   Helsinki
+
+print("Name\t\tAge\t\tCountry\t\tCity")
+print("Asabeneh\t250\t\tFinland\t\tHelsinki")
+
+# 35. Utilice el método de formato de cadena para mostrar lo siguiente:
+
+radius = 10
+area = 3.14 * radius ** 2 # Número permanece como flotante
+
+# The area of a circle with radius 10 is 314 meters square.
+
+new_string = (f"The area of a circle with radius {radius} is {area:.0f} meters square")
+# Nota: {area:.0f} = Esto es muy útil cuando deseas mantener el valor como un número flotante internamente, pero mostrarlo sin decimales.
+print(new_string)
+
+# 36. Realice lo siguiente utilizando métodos de formato de cadena:
+
+# 8 + 6 = 14
+# 8 - 6 = 2
+# 8 * 6 = 48
+# 8 / 6 = 1.33
+# 8 % 6 = 2
+# 8 // 6 = 1
+# 8 ** 6 = 262144
+
+x = 8
+y = 6
+
+print(f"{x} + {y} = {x + y}") # Método f-string
+print("{} - {} = {}".format(x, y, x - y)) # Método str.format
+print("%d * %d = %d" %(x, y, x * y)) # Método interpolación usando operador %
+print(str(x) + " " + "/" + " " + str(y) + " " + "=" + " " + str(round(x/y,2))) # Método concatenación
+print(f"{x} % {y} = {x % y}") # Método f-string
+print("{} // {} = {}".format(x, y, x // y)) # Método str.format
+print("%d ** %d = %d" %(x, y, x ** y)) # Método interpolacion usando operador %
+

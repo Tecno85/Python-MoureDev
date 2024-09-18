@@ -1,4 +1,3 @@
-
 ![pythopn](./assets/img/python_chat.webp)
 
 # _`print()`_
@@ -228,5 +227,15 @@ Ejemplo en Python: mi_lista[0] accede al primer elemento de la lista.
 Slices (corte): Para extraer porciones de una secuencia (como en tu ejemplo anterior).
 
 Ejemplo: cadena[0:5].
+
+## Método `round()`
+
+Si necesitas redondear el valor de una variable `float` directamente (sin formatear la salida), puedes usar la función `round()`:
+
+```py
+mi_numero = 3.14159265359
+mi_numero_redondeado = round(mi_numero, 2)  # Redondea a 2 decimales
+print(mi_numero_redondeado)
+```
 
 `Quéde en Tiempo: 3:`

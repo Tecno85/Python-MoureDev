@@ -36,7 +36,7 @@ name, surname, age = "Ivan", "Madrid", 39
 
 print(f"Mi nombre es {name} {surname} y tengo {age} años") # tipo: cadena formateada (f-string)
 print("Mi nombre es " + name + " " + surname + " " + "y tengo " + str(age) + " años.") # tipo: concatenación
-print("Mi nombre es {} {} y tengo {} años".format(name, surname, age)) # tipo: método .format()
+print("Mi nombre es {} {} y tengo {} años".format(name, surname, age)) # tipo: método str.format()
 print("Mi nombre es %s %s y tengo %d años" %(name, surname, age)) # tipo: interpolación usando operador %
 
 """Cadenas de Python como secuencias de carácteres"""
