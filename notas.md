@@ -238,6 +238,10 @@ mi_numero_redondeado = round(mi_numero, 2)  # Redondea a 2 decimales
 print(mi_numero_redondeado)
 ```
 
+---
+
+---
+
 ## _`Listas`_
 
 Una listas en Python es una estructura de datos que permite almacenar múltiples elementos en un solo contenedor o variable. Las listas son _**ordenadas**_, _**cambiales**_ y permiten elementos _**duplicados**_.
@@ -257,7 +261,7 @@ Una listas en Python es una estructura de datos que permite almacenar múltiples
 Las listas se crean usando cohorchetes **`[]`**, y los elementos se separan por comas. Ejemplo:
 
 ```py
-my_list = [1, 2, 3, "cuatro", 5.0]
+my_list = [1, 2, 3, "four", 5.0]
 ```
 
 ### Acceso a los Elementos
@@ -274,109 +278,43 @@ last_element = my_list[-1] # Accedo al último elemento (5.0)
 Puedes cambiar el valor de un elemento en una lista:
 
 ```py
-my_list[3] = "Cuatro Modificado"
+my_list = [1, 2, 3, "four", 5.0]
+
+my_list[3] = "Four Modified"
+print(my_list) # Imprime [1, 2, 3, "Four Modified", 5.0]
 ```
 
 ### Métodos Comunes
 
-- `append()`: Agrega un elemento al final de la lista
+- `append()`: Agrega un elemento al final de la lista.
 
 ```py
+my_list = [1, 2, 3, "four", 5.0]
 my_list.append(6)
+my_list = [1, 2, 3, "four", 5.0, 6] # Agrega el número "6" al final de la lista.
 ```
 
+- `insert()`: Inserta un elemento en una posición específica de la lista.
 
-`Quéde en Tiempo: 3:08`
-
-¡Claro! En Python, una **lista** es una estructura de datos que permite almacenar múltiples elementos en un solo contenedor. Las listas son **ordenadas**, **cambiables** y **permiten elementos duplicados**. Aquí tienes una explicación detallada:
-
-### Características de las Listas en Python
-
-1. **Ordenadas**: Los elementos en una lista mantienen el orden en que se agregaron. Puedes acceder a los elementos usando índices, que empiezan desde 0.
-
-2. **Cambiables**: Puedes modificar los elementos de una lista después de haberla creado. Esto significa que puedes cambiar, agregar o eliminar elementos en una lista.
-
-3. **Permiten Duplicados**: Las listas pueden contener elementos duplicados. Los elementos en una lista no tienen que ser únicos.
-
-4. **Heterogéneas**: Una lista puede contener elementos de diferentes tipos, como números, cadenas, booleanos, otras listas, etc.
-
-### Sintaxis
-
-Las listas se crean usando corchetes `[]`, y los elementos se separan por comas. Por ejemplo:
-
-```python
-mi_lista = [1, 2, 3, "cuatro", 5.0]
+```py
+my_list = [1, 2, 3, "four", 5.0]
+my_list.insert(3, "Hello Ismael")
+my_list = [1, 2, 3, "four", "Hello Ismael", 5.0] # Inserto "Hello Ismael" en la posición 4.
 ```
 
-### Acceso a los Elementos
+- `remove()`: Elimina un elemento específico de una lista.
 
-Puedes acceder a los elementos de una lista usando índices:
-
-```python
-primer_elemento = mi_lista[0]  # Accede al primer elemento (1)
-ultimo_elemento = mi_lista[-1] # Accede al último elemento (5.0)
+```py
+my_list = [1, 2, 3, "four", 5.0]
+my_list.remove(3)
+my_list = [1, 2, "four", 5.0] # Eliminó el número "3"
 ```
 
-### Modificación de Elementos
+- `pop()`: Elimina el índice espedificado( o el último elemento si no se especifica el índice).
 
-Puedes cambiar el valor de un elemento en una lista:
-
-```python
-mi_lista[3] = "cuatro modificado"
+```py
+lst = ['item1', 'item2']
+lst.pop()       # last item
 ```
 
-### Métodos Comunes
-
-- **`append()`**: Agrega un elemento al final de la lista.
-  ```python
-  mi_lista.append(6)
-  ```
-
-- **`insert()`**: Inserta un elemento en una posición específica.
-  ```python
-  mi_lista.insert(2, "insertado")
-  ```
-
-- **`remove()`**: Elimina la primera ocurrencia de un elemento.
-  ```python
-  mi_lista.remove("cuatro")
-  ```
-
-- **`pop()`**: Elimina y devuelve el elemento en una posición específica (o el último si no se especifica una posición).
-  ```python
-  ultimo = mi_lista.pop()
-  ```
-
-- **`sort()`**: Ordena los elementos de la lista en su lugar.
-  ```python
-  mi_lista.sort()
-  ```
-
-- **`reverse()`**: Invierte el orden de los elementos en la lista.
-  ```python
-  mi_lista.reverse()
-  ```
-
-### Ejemplo Completo
-
-```python
-# Crear una lista
-frutas = ["manzana", "banana", "cereza"]
-
-# Acceder a un elemento
-print(frutas[1])  # Imprime: banana
-
-# Modificar un elemento
-frutas[1] = "naranja"
-
-# Agregar un elemento
-frutas.append("kiwi")
-
-# Eliminar un elemento
-frutas.remove("manzana")
-
-# Mostrar la lista modificada
-print(frutas)  # Imprime: ['naranja', 'cereza', 'kiwi']
-```
-
-Las listas son muy versátiles y se utilizan frecuentemente en la programación en Python para almacenar y manipular colecciones de datos. ¡Espero que esto te haya aclarado qué son las listas en Python!
+`Quéde en Tiempo: 4:04`
