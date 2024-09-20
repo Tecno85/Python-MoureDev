@@ -39,28 +39,50 @@ mixed_data_types = ["Ivan", 39, 1.64, "Casado", "Mirador de la Sierra 2"]
 
 print(len(mixed_data_types))
 
+# 6. Declare una variable de lista denominada it_companies y asigne valores iniciales Facebook, Google, Microsoft, Apple, IBM, Oracle y Amazon.
 
+it_companies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+
+# 7. Imprime la lista usando print()
+
+print(it_companies)
+
+# 8. Imprime el número de empresas de la lista
+
+print(len(it_companies))
+
+# 9. Imprime la primera, la intermedia y la última empresa
+
+it_companies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+
+print(it_companies[0]) # Imprime el primer elemento o empresa
+
+intermediate_company = len(it_companies)  // 2
+print(it_companies[intermediate_company]) # Imprime la empresa intermedia
+
+print(it_companies[-1]) # Imprime la ultima elemento o empresa
+
+# 10. Imprima la lista después de modificar una de las empresas
+
+it_companies[3] = "Tesla"
+print(it_companies)
+
+# 11. Agregar una empresa de TI a it_companies
+
+it_companies.append("Twitter")
+print(it_companies)
+
+# 11. Cambie uno de los nombres de la it_companies a mayúsculas (¡excluido IBM!)
+
+it_companies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+
+it_companies[1] = "GOOGLE" # Solución # 1
+it_companies[2] = it_companies[2].upper() # Solución # 2
+print(it_companies)
+
+
+# 12. 
 """ 
-
-
-
-Declara una lista llamada mixed_data_types, pon tu (nombre, edad, altura, estado civil, dirección)
-
-Declare una variable de lista denominada it_companies y asigne valores iniciales Facebook, Google, Microsoft, Apple, IBM, Oracle y Amazon.
-
-Imprime la lista usando print()
-
-Imprime el número de empresas de la lista
-
-Imprime la primera, la intermedia y la última empresa
-
-Imprima la lista después de modificar una de las empresas
-
-Agregar una empresa de TI a it_companies
-
-Inserte una empresa de TI en el centro de la lista de empresas
-
-Cambie uno de los nombres de la it_companies a mayúsculas (¡excluido IBM!)
 
 Une el it_companies con una cadena '#; '
 

@@ -1,6 +1,6 @@
-![pythopn](./assets/img/python_chat.webp)
+![pythopn](./assets/img/Python_moderno.webp)
 
-# _`print()`_
+# _`print()`_ 
 
 `print()` permite controlar cómo se separan los elementos que imprimes mediante el uso de los parámetros sep y end.
 
@@ -316,5 +316,7 @@ my_list = [1, 2, "four", 5.0] # Eliminó el número "3"
 lst = ['item1', 'item2']
 lst.pop()       # last item
 ```
+
+
 
 `Quéde en Tiempo: 4:04`
