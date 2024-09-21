@@ -81,22 +81,76 @@ it_companies[2] = it_companies[2].upper() # Solución # 2
 print(it_companies)
 
 
-# 12. 
+# 12. Une el it_companies con una cadena '#; '
+
+it_companies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+combinet_companies = " - ".join(it_companies)
+print(combinet_companies) # Imprime: Facebook - Google - Microsoft - Apple - IBM - Oracle - Amazon
+
+# 13. Compruebe si existe una determinada empresa en la lista de it_companies.
+
+it_companies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+check_company = "Oracle" in it_companies
+print(check_company) # Imprime: True
+
+# 14. Ordene la lista usando el método sort()
+
+unorder_list = [4, 7, 9, 2, 8, 6, 3, 1, 5, 10]
+unorder_list.sort()
+print(unorder_list) # Imprime: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# 15. Invierta la lista en orden descendente usando el método reverse()
+
+unorder_list = [4, 7, 9, 2, 8, 6, 3, 1, 5, 10]
+unorder_list.sort(reverse = True)
+print(unorder_list) # Imprime: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+# 16. Corta las 3 primeras empresas de la lista
+
+it_companies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+some_companies = it_companies[0:3] # Solución 1
+some_companies = it_companies[:3] # Solución 2
+print(some_companies) # Imprime: ['Facebook', 'Google', 'Microsoft']
+
+# 17. Elimine la empresa o empresas de TI intermedias de la lista
+
+# Solución 1
+it_companies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+print(it_companies)
+
+middle_position = len(it_companies) // 2
+delete_company = it_companies.pop(middle_position)
+print(delete_company)
+print(it_companies)
+
+# Solución 2
+it_companies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+
+print(it_companies)
+middle_position = len(it_companies) // 2
+print(it_companies.pop(middle_position))
+print(it_companies)
+
+# Solución 3
+
+it_companies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+
+# Esta solución me muestra el indice de la compañia eliminada
+delete_company = len(it_companies) // 2
+print(it_companies)
+del it_companies[delete_company]
+print(delete_company)
+print(it_companies)
+
+# Esta solución me muestra el nombre de la compañia eliminada
+delete_company = it_companies[len(it_companies) // 2]
+del it_companies[len(it_companies) // 2]
+print(delete_company)
+print(it_companies)
+
+
+
 """ 
-
-Une el it_companies con una cadena '#; '
-
-Compruebe si existe una determinada empresa en la lista de it_companies.
-
-Ordene la lista usando el método sort()
-
-Invierta la lista en orden descendente usando el método reverse()
-
-Corta las 3 primeras empresas de la lista
-
-Corta las últimas 3 empresas de la lista
-
-Elimine la empresa o empresas de TI intermedias de la lista
 
 Eliminar la primera empresa de TI de la lista
 

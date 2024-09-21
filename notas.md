@@ -244,7 +244,7 @@ print(mi_numero_redondeado)
 
 ## _`Listas`_
 
-Una listas en Python es una estructura de datos que permite almacenar múltiples elementos en un solo contenedor o variable. Las listas son _**ordenadas**_, _**cambiales**_ y permiten elementos _**duplicados**_.
+Una lista en Python es una estructura de datos que permite almacenar múltiples elementos en un solo contenedor o variable. Las listas son _**ordenadas**_, _**cambiales**_ y permiten elementos _**duplicados**_.
 
 ### Caracteristicas de las _`Listas`_
 
