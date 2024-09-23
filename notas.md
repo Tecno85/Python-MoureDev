@@ -316,7 +316,52 @@ my_list = [1, 2, "four", 5.0] # Eliminó el número "3"
 lst = ['item1', 'item2']
 lst.pop()       # last item
 ```
+## **`slice (rebanado)`**
 
+En Python, puedes usar el método **`insert()`** para agregar un solo elemento en una posición específica, pero si quieres agregar **varios elementos** a una lista en una posición determinada, una buena opción es utilizar el ***slice* (rebanado)** para insertar una lista de varios elementos en una posición específica.
 
+Aquí te dejo un ejemplo de cómo hacerlo:
 
+### Ejemplo:
+```python
+# Lista inicial
+mi_lista = [1, 2, 3, 7, 8]
+
+# Elementos a agregar
+nuevos_elementos = [4, 5, 6]
+
+# Agregar los nuevos elementos en la posición 3 (antes del 7)
+mi_lista[3:3] = nuevos_elementos
+
+print(mi_lista)
+```
+
+### Resultado:
+```python
+[1, 2, 3, 4, 5, 6, 7, 8]
+```
+
+### Explicación:
+- `mi_lista[3:3]` selecciona la **posición 3** (justo antes del número 7) sin eliminar ningún elemento existente.
+- Luego, asignamos `nuevos_elementos` en esa posición, lo que inserta los nuevos elementos sin reemplazar los actuales.
+
+De esta forma, puedes agregar varios elementos en la posición específica de la lista.
+
+## `La sintaxis [5:5]`
+
+En Python se refiere a un slice (rebanado) de la lista, y aquí está la explicación:
+
+- full_stack[5:5]:
+
+  - El primer número (5) es el índice de inicio y el segundo (también 5) es el índice final.
+
+  - Este slice no selecciona ningún elemento de la lista, porque el inicio y el final son iguales. Esto significa que estás eligiendo una posición vacía en la lista donde puedes insertar nuevos elementos.
+
+**¿Por qué se repite?**
+
+- Usar el mismo índice en el inicio y el final es una forma de indicar una posición vacía. Así que cuando haces full_stack[5:5] = new_languages, estás insertando los elementos de new_languages en esa posición vacía, sin reemplazar nada.
+
+En resumen, la repetición de los índices es necesaria para indicar que quieres insertar elementos sin eliminar nada existente.
+
+---
 `Quéde en Tiempo: 4:04`
