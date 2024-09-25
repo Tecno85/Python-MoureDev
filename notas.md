@@ -472,4 +472,61 @@ El resultado será:
 China - Rusia - Estados Unidos - Finlandia - Suecia - Noruega - Dinamarca
 ```
 
+## ****`TUPLAS`****
+
+Una tupla es una estructura de datos en Python que permite almacenar una colección de elementos ordenados e inmutables. Esto significa que, una vez que se crea una tupla, no se pueden modificar, agregar o eliminar elementos de ella.
+
+_Características principales de las tuplas_:
+
+- _Ordenadas_: Los elementos dentro de una tupla tienen un orden definido, lo que significa que puedes acceder a ellos usando índices, igual que en las listas.
+
+- _Inmutables_: A diferencia de las listas, no puedes cambiar el contenido de una tupla una vez creada. No se pueden añadir, eliminar o modificar elementos.
+
+- _Permiten elementos duplicados_: Al igual que las listas, una tupla puede contener elementos duplicados.
+
+- _Heterogéneas_: Pueden contener elementos de diferentes tipos de datos (números, cadenas, listas, etc.).
+
+### `Sintaxis`
+
+Las `tuplas` se definen usando **paréntesis** `()` y separando los elementos con **comas**.
+
+```py
+my_tuple = (1, 2, 3, "a", "b", "c") # Forma recomendada, clara y explícita.
+```
+También es posible crear tuplas sin paréntesis, simplementet separando los elementos con comas, no es una buena práctica, es usada sobre todo en el desempaquetado de variables. 
+
+```py
+my_tuple = 1, 2, 3 # Válida pero menos clara. 
+```
+
+### `Longitud`
+
+Usamos el método `len()` para obtener la longitud de una tupla.
+
+```py
+my_tuple = (1, 2, 3, "a", "b", "c") 
+len(my_tuple)
+print(len(my_tuple)) # La longitud de la tupla es de: "6" elementos.
+```
+### `Acceso a elementos`
+
+Es posible acceder a los elementos de una tupla mediante su índice, empezando desde 0, para acceder al primer elemento en la indexación positiva y desde -1 en la indezaxión negativa. El -1 representa el ultimo número de la tupla en la indexación negativa. Dado que esta comienza la indexación desde el final de la tupla. 
+
+```py
+my_tuple = (10, 20, 30)
+print(my_tuple[0]) # Imprime: 10. Representa indexación positiva.
+print(my_tuple[-2]) # Imprime: 10. Representa indexación negativa.
+```
+
+### `Inmutabilidad`
+
+No se puede cambiar los elementos en una tupla
+
+```py
+my_tuple = (10, 20, 30)
+my_tuple[1] = 40 # Imprime error dado que la tuplas no son modificables. 
+print(my_tuple[1]) # TypeError: 'tuple' object does not support item assignment
+```
+
+### `Cambiar tuplas a listas`
 `Quéde en Tiempo: 4:04`
