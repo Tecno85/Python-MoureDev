@@ -1,6 +1,6 @@
 ![pythopn](./assets/img/Python_moderno.webp)
 
-# _`print()`_ 
+# _`print()`_
 
 `print()` permite controlar cómo se separan los elementos que imprimes mediante el uso de los parámetros sep y end.
 
@@ -316,13 +316,15 @@ my_list = [1, 2, "four", 5.0] # Eliminó el número "3"
 lst = ['item1', 'item2']
 lst.pop()       # last item
 ```
+
 ## **`slice (rebanado)`**
 
-En Python, puedes usar el método **`insert()`** para agregar un solo elemento en una posición específica, pero si quieres agregar **varios elementos** a una lista en una posición determinada, una buena opción es utilizar el ***slice* (rebanado)** para insertar una lista de varios elementos en una posición específica.
+En Python, puedes usar el método **`insert()`** para agregar un solo elemento en una posición específica, pero si quieres agregar **varios elementos** a una lista en una posición determinada, una buena opción es utilizar el **_slice_ (rebanado)** para insertar una lista de varios elementos en una posición específica.
 
 Aquí te dejo un ejemplo de cómo hacerlo:
 
 ### Ejemplo:
+
 ```python
 # Lista inicial
 mi_lista = [1, 2, 3, 7, 8]
@@ -337,11 +339,13 @@ print(mi_lista)
 ```
 
 ### Resultado:
+
 ```python
 [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
 ### Explicación:
+
 - `mi_lista[3:3]` selecciona la **posición 3** (justo antes del número 7) sin eliminar ningún elemento existente.
 - Luego, asignamos `nuevos_elementos` en esa posición, lo que inserta los nuevos elementos sin reemplazar los actuales.
 
@@ -364,4 +368,108 @@ En Python se refiere a un slice (rebanado) de la lista, y aquí está la explica
 En resumen, la repetición de los índices es necesaria para indicar que quieres insertar elementos sin eliminar nada existente.
 
 ---
+
+## `Slicing (:)`
+
+En la expresión `first_list_countries = countries[:mid_list_countries]`, los dos puntos `:` forman parte de la sintaxis de **slicing** (segmentación) en Python, que se utiliza para extraer una porción de una lista, string o cualquier otra estructura indexada.
+
+En este caso:
+
+- `countries[:mid_list_countries]` significa:
+  - **Empieza desde el inicio** de la lista (`countries`) hasta el índice **justo antes de `mid_list_countries`**.
+
+### Detalle de los componentes:
+
+- **Primer valor (vacío antes de `:`)**: Cuando no se especifica un valor antes de los dos puntos, significa "desde el inicio de la lista".
+- **Segundo valor (`mid_list_countries`)**: Indica el índice hasta donde se extraerán los elementos, **sin incluir este índice**.
+
+Por ejemplo, si `mid_list_countries = 3`, entonces:
+
+- `countries[:3]` devolverá los elementos desde el índice 0 hasta el índice 2 (los tres primeros elementos de la lista).
+
+### Ejemplo:
+
+```python
+countries = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola']
+mid_list_countries = 3
+
+# Esto retornará los primeros 3 países (índices 0, 1 y 2)
+first_list_countries = countries[:mid_list_countries]
+print(first_list_countries)
+```
+
+Resultado:
+
+```
+['Afghanistan', 'Albania', 'Algeria']
+```
+
+En resumen, el uso de los dos puntos `:` en slicing permite definir el rango de índices desde el cual se seleccionarán los elementos.
+
+---
+
+## `Método abs()`
+
+En Python devuelve el valor absoluto de un número. El valor absoluto es simplemente la distancia de un número desde el cero en la recta numérica, sin tener en cuenta si es positivo o negativo.
+
+### Sintaxis:
+
+```python
+abs(x)
+```
+
+- `x` puede ser un número entero, un número flotante o un número complejo.
+
+### Ejemplos:
+
+1. **Números enteros:**
+
+   ```python
+   print(abs(-10))  # Salida: 10
+   print(abs(5))    # Salida: 5
+   ```
+
+2. **Números flotantes:**
+
+   ```python
+   print(abs(-3.14))  # Salida: 3.14
+   ```
+
+3. **Números complejos:**
+   Para números complejos, `abs()` devuelve la magnitud del número (su distancia desde el origen en el plano complejo).
+   ```python
+   print(abs(3 + 4j))  # Salida: 5.0 (ya que la magnitud de 3+4j es √(3^2 + 4^2) = 5)
+   ```
+
+### ¿Cuándo usarlo?
+
+El método `abs()` es útil cuando solo te interesa el valor positivo de un número, como en cálculos de distancias, diferencias o cuando necesitas ignorar el signo.
+
+¡Espero que esto aclare el uso del método `abs()`!
+
+---
+
+## Separar elementos con Símbolo guion `(-)`
+
+Para separar los elementos de una lista por un símbolo específico, como el guion (`-`), puedes usar el método `join()` en Python. Aquí te dejo un ejemplo:
+
+```python
+countries = ['China', 'Rusia', 'Estados Unidos', 'Finlandia', 'Suecia', 'Noruega', 'Dinamarca']
+
+# Usar join para separar los elementos con un guion (-)
+countries_str = ' - '.join(countries)
+
+print(countries_str)
+```
+
+### Explicación:
+
+- `join()` toma una lista y une todos sus elementos en una sola cadena, usando el separador que especifiques. En este caso, el separador es `' - '`.
+
+El resultado será:
+
+```
+China - Rusia - Estados Unidos - Finlandia - Suecia - Noruega - Dinamarca
+```
+
 `Quéde en Tiempo: 4:04`

@@ -1,8 +1,13 @@
-# 25. Después de unirse a las listas de la pregunta 26. Copie la lista unida y asígnela a una variable full_stack. A continuación, inserte Python y SQL después de Redux.
+# # Desempaqueta los tres primeros países y el resto como países escandinavos.
 
-full_stack = ['HTML', 'CSS', 'JS', 'React', 'Redux', 'Node', 'Express', 'MongoDB']
+# # Se dio solución utilizando el "Desempaquetado de listas en Python"
 
-new_languages = ["Python", "SQL"]
+countries = ['China', 'Rusia', 'Estados Unidos', 'Finlandia', 'Suecia', 'Noruega', 'Dinamarca']
+countries_str = ' - '.join(countries)
 
-full_stack[4:2] = new_languages
-print(full_stack)
+[first, second, third, *paises_escandinavos] = countries
+
+print("Los tres primeros países son: ", first, second, third)
+print("Los países escandinavos son: ", paises_escandinavos)
+print(countries_str)
+

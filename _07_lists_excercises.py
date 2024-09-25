@@ -241,12 +241,355 @@ print(front_end) # Imprime solo la nueva lista sin el tipo
 
 full_stack = ['HTML', 'CSS', 'JS', 'React', 'Redux', 'Node', 'Express', 'MongoDB']
 
-full_stack.insert(4, "Python")
+new_languages = ["Python", "SQL"]
+
+full_stack[5:5] = new_languages
 print(full_stack)
 
-"""
 
-""" 
+""" Excercises Level 2 """ 
 
+#* 1.La siguiente es una lista de 10 edades de estudiantes:
 
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 
+#* 2. Ordene la lista y encuentre la edad mínima y máxima
+
+# Lista ordenada de menor a mayor
+ages.sort()
+print(ages) # Imprime la lista [19, 19, 20, 22, 24, 24, 24, 25, 25, 26]
+
+# Edad mínima
+minimum_age = ages[0]
+print(minimum_age)
+
+# Edad máxima
+maximum_age = ages[-1]
+print(maximum_age)
+
+#* 3. Agregue la edad mínima y la edad máxima nuevamente a la lista
+
+ages.insert(0, 19) # Agrega nuevamente la edad mínima
+ages.append(26)
+# element_position = len(ages) -1 # Se obtiene la ultima ubicación de la lista
+# ages.insert(element_position, 26) # Agrega nuevamente la edad máxima
+print(ages) # Imprime la lista con la edad mínima y máxima agregada
+
+#* 4. Encuentre la edad media (un elemento del medio o dos elementos del medio divididos por dos)
+
+ages = [80, 40, 30, 10, 70, 90, 50, 60, 20]
+
+ages.sort()
+mid_ages = ages[len(ages) // 2]
+print(mid_ages)
+
+#* 5. Encuentre la edad promedio (suma de todos los artículos dividida por su número)
+
+ages = [80, 40, 30, 10, 70, 90, 50, 60, 20]
+
+ages.sort()
+average_age = sum(ages) / len(ages)
+print(average_age)
+#* Nota: En Python, puedes usar la función sum() para sumar todos los elementos de una lista y len() para obtener el número total de elementos. Así puedes calcular el promedio de manera más limpia y sencilla.
+
+#* 6. Encuentre el rango de las edades (máx. menos mín.)
+
+# Solución Mia - No muy optima ejeje
+ages = [80, 40, 30, 10, 70, 90, 50, 60, 20]
+
+ages.sort()
+print(ages[0]) # Valor menor
+print(ages[-1]) # Valor mayor
+
+#* Nota: Python tiene las funciones min() y max() para encontrar los valores máximos y minimos en una lista. 
+# Solcución 2
+
+ages = [80, 40, 30, 10, 70, 90, 50, 60, 20]
+min_age = min(ages)
+max_age = max(ages)
+age_range = max_age - min_age
+
+print("El valor máximo es:", min_age)
+print("El valor máximo es:", max_age)
+print("El rango es:", age_range)
+
+#* Compare el valor de (min - promedio) y (max - promedio), use el método abs()
+
+ages = [80, 40, 30, 10, 70, 90, 50, 60, 20]
+
+value_min = min(ages)
+print(value_min)
+value_max = max(ages)
+print(value_max)
+value_average = sum(ages) // len(ages)
+print(value_average)
+
+compare_value_min = abs(value_min - value_average)
+compare_value_max = abs(value_max - value_average)
+
+print(f"El valor (min - promedio) es: {compare_value_min} y el valor (max - promedio) es: {compare_value_max}")
+
+#* 7. Encuentre el (los) país (s) del medio en la lista de países
+
+# Divida la lista de países en dos listas iguales si es incluso si no hay un país más para la primera mitad.
+# Si la longitud de la lista es par: Divide la lista en dos listas de igual tamaño.
+# Si la longitud de la lista es impar: La primera lista debe tener un país más que la segunda. Esto significa que la primera lista contendrá un elemento adicional en comparación con la segunda.
+
+# Solución 1
+countries = [
+  'Afghanistan',
+  'Albania',
+  'Algeria',
+  'Andorra',
+  'Angola',
+  'Antigua and Barbuda',
+  'Argentina',
+  'Armenia',
+  'Australia',
+  'Austria',
+  'Azerbaijan',
+  'Bahamas',
+  'Bahrain',
+  'Bangladesh',
+  'Barbados',
+  'Belarus',
+  'Belgium',
+  'Belize',
+  'Benin',
+  'Bhutan',
+  'Bolivia',
+  'Bosnia and Herzegovina',
+  'Botswana',
+  'Brazil',
+  'Brunei',
+  'Bulgaria',
+  'Burkina Faso',
+  'Burundi',
+  'Cambodia',
+  'Cameroon',
+  'Canada',
+  'Cape Verde',
+  'Central African Republic',
+  'Chad',
+  'Chile',
+  'China',
+  'Colombi',
+  'Comoros',
+  'Congo (Brazzaville)',
+  'Congo',
+  'Costa Rica',
+  "Cote d'Ivoire",
+  'Croatia',
+  'Cuba',
+  'Cyprus',
+  'Czech Republic',
+  'Denmark',
+  'Djibouti',
+  'Dominica',
+  'Dominican Republic',
+  'East Timor (Timor Timur)',
+  'Ecuador',
+  'Egypt',
+  'El Salvador',
+  'Equatorial Guinea',
+  'Eritrea',
+  'Estonia',
+  'Ethiopia',
+  'Fiji',
+  'Finland',
+  'France',
+  'Gabon',
+  'Gambia, The',
+  'Georgia',
+  'Germany',
+  'Ghana',
+  'Greece',
+  'Grenada',
+  'Guatemala',
+  'Guinea',
+  'Guinea-Bissau',
+  'Guyana',
+  'Haiti',
+  'Honduras',
+  'Hungary',
+  'Iceland',
+  'India',
+  'Indonesia',
+  'Iran',
+  'Iraq',
+  'Ireland',
+  'Israel',
+  'Italy',
+  'Jamaica',
+  'Japan',
+  'Jordan',
+  'Kazakhstan',
+  'Kenya',
+  'Kiribati',
+  'Korea, North',
+  'Korea, South',
+  'Kuwait',
+  'Kyrgyzstan',
+  'Laos',
+  'Latvia',
+  'Lebanon',
+  'Lesotho',
+  'Liberia',
+  'Libya',
+  'Liechtenstein',
+  'Lithuania',
+  'Luxembourg',
+  'Macedonia',
+  'Madagascar',
+  'Malawi',
+  'Malaysia',
+  'Maldives',
+  'Mali',
+  'Malta',
+  'Marshall Islands',
+  'Mauritania',
+  'Mauritius',
+  'Mexico',
+  'Micronesia',
+  'Moldova',
+  'Monaco',
+  'Mongolia',
+  'Morocco',
+  'Mozambique',
+  'Myanmar',
+  'Namibia',
+  'Nauru',
+  'Nepal',
+  'Netherlands',
+  'New Zealand',
+  'Nicaragua',
+  'Niger',
+  'Nigeria',
+  'Norway',
+  'Oman',
+  'Pakistan',
+  'Palau',
+  'Panama',
+  'Papua New Guinea',
+  'Paraguay',
+  'Peru',
+  'Philippines',
+  'Poland',
+  'Portugal',
+  'Qatar',
+  'Romania',
+  'Russia',
+  'Rwanda',
+  'Saint Kitts and Nevis',
+  'Saint Lucia',
+  'Saint Vincent',
+  'Samoa',
+  'San Marino',
+  'Sao Tome and Principe',
+  'Saudi Arabia',
+  'Senegal',
+  'Serbia and Montenegro',
+  'Seychelles',
+  'Sierra Leone',
+  'Singapore',
+  'Slovakia',
+  'Slovenia',
+  'Solomon Islands',
+  'Somalia',
+  'South Africa',
+  'Spain',
+  'Sri Lanka',
+  'Sudan',
+  'Suriname',
+  'Swaziland',
+  'Sweden',
+  'Switzerland',
+  'Syria',
+  'Taiwan',
+  'Tajikistan',
+  'Tanzania',
+  'Thailand',
+  'Togo',
+  'Tonga',
+  'Trinidad and Tobago',
+  'Tunisia',
+  'Turkey',
+  'Turkmenistan',
+  'Tuvalu',
+  'Uganda',
+  'Ukraine',
+  'United Arab Emirates',
+  'United Kingdom',
+  'United States',
+  'Uruguay',
+  'Uzbekistan',
+  'Vanuatu',
+  'Vatican City',
+  'Venezuela',
+  'Vietnam',
+  'Yemen',
+  'Zambia',
+  'Zimbabwe',
+];
+
+# Calcular la longitud de la lista
+mid_list_countries = len(countries) // 2
+
+# Dividir la lista
+if len(countries) % 2 == 0:
+    first_list_countries = countries[:mid_list_countries]
+    second_list_countries = countries[mid_list_countries:]
+else:
+    first_list_countries = countries[:mid_list_countries + 1]
+    second_list_countries = countries[mid_list_countries + 1:]
+
+# Imprimir las listas
+print(first_list_countries)
+print(len(first_list_countries))
+print(second_list_countries)
+print(len(second_list_countries))
+
+# Solución 2
+
+# Longitud de lista
+list_length = len(countries)
+print(f"La longitud de la lista de Países es de: {list_length} carácteres")
+print()
+# Longitud de la lista entre (2)
+mid_len_countries = len(countries) // 2
+print(f"La longitud media de los Países es de: {mid_len_countries} carácteres")
+print()
+# Dividir lista de países
+if len(countries) % 2 == 0:
+    first_lits_countries = countries[:mid_len_countries]
+    second_list_countries = countries[mid_len_countries:]
+else:
+    first_lits_countries = countries[:mid_len_countries + 1]
+    second_list_countries = countries[mid_len_countries + 1:]
+
+print("Primera Lista de Países")
+print(first_lits_countries)
+print()
+print("Segunda Lista de Países")
+print(second_list_countries)
+
+#* 8. ['China', 'Rusia', 'Estados Unidos', 'Finlandia', 'Suecia', 'Noruega', 'Dinamarca']. Desempaqueta los tres primeros países y el resto como países escandinavos.
+
+# Solución que le di, que no es tan simplificada
+
+countries = ['China', 'Rusia', 'Estados Unidos', 'Finlandia', 'Suecia', 'Noruega', 'Dinamarca']
+countries_str = ' - '.join(countries)
+paises_del_norte = countries[:3]
+scandinavian_countries = countries[3:7]
+print(paises_del_norte) 
+print(scandinavian_countries) 
+
+# Solución 2
+# Se dio solución utilizando el "Desempaquetado de listas en Python"
+
+countries = ['China', 'Rusia', 'Estados Unidos', 'Finlandia', 'Suecia', 'Noruega', 'Dinamarca']
+
+[first, second, third, *scandinavian_countries] = countries
+
+print("Los primeros paises son: ", first, second, third)
+print("Los paises escandinavos son: ", scandinavian_countries)
