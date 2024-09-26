@@ -472,7 +472,7 @@ El resultado será:
 China - Rusia - Estados Unidos - Finlandia - Suecia - Noruega - Dinamarca
 ```
 
-## ![tuplas_icon](./assets/img/python_icon_2.png) **`TUPLAS`** ![tuplas_icon](./assets/img/python_icon_1.png)
+## ![tuplas_icon](./assets/img/python_icon_3.png) **`TUPLAS`** ![tuplas_icon](./assets/img/python_icon_4.png)
 
 Una tupla es una estructura de datos en Python que permite almacenar una colección de elementos ordenados e inmutables. Esto significa que, una vez que se crea una tupla, no se pueden modificar, agregar o eliminar elementos de ella.
 
