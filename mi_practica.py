@@ -1,3 +1,2 @@
-my_tupla = (1, 2, 3, 4)
-del my_tupla
-print(my_tupla) # Imprime: NameError: name 'my_tupla' is not defined
+my_tuple = 1, 2, 3 # Válida pero menos clara.
+print(type(my_tuple)) # Imprime <class 'tuple'>
