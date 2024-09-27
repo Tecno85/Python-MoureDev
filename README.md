@@ -1,1 +1,1 @@
-`Quéde en Tiempo: 4:20`
+`Quéde en Tiempo: 4:32 Stes`
