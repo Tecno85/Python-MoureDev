@@ -1,4 +1,4 @@
-## ![fuego](/assets/img/icon_6.png) `Ejercicios` ![fuego](/assets/img/icon_6.png)
+## ![fuego](/assets/img/icon_13.png) `Ejercicios` ![fuego](/assets/img/icon_13.png) 
 
 1. Crear una tupla vacia
 
