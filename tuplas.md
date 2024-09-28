@@ -201,28 +201,28 @@ all_my_brothers = (my_brothers + my_sisters)
 print(all_my_brothers)
 ```
 
-4. 'Cuántos hermanos tienes?
+4. ¿Cuántos hermanos tienes?
 
 ```py
 number_of_siblings = len(all_my_brothers)
 print(number_of_siblings)
 ```
 
-5. Modifique la tupla de hermanos y agregue el nombre de su padre y madre y asígnelo a family_members
+5. Modifique la tupla de hermanos y agregue el nombre de su padre y madre y asígnelo a _family_members_
 
 ```py
 Solución 1
 
-all_my_brothers = list(all_my_brothers)
+all_my_brothers = list(all_my_brothers) # Cambia de tupla a lista
 print(all_my_brothers)
-all_my_brothers.append("Efrain")
+all_my_brothers.append("Efrain") # Agrega el elemento "Efrain"
 print(all_my_brothers)
-all_my_brothers.append("Emma")
+all_my_brothers.append("Emma") # Agrega el elemento "Emma"
 print(all_my_brothers)
-print(type(all_my_brothers))
-all_my_brothers = tuple(all_my_brothers)
-print(type(all_my_brothers))
-family_members = all_my_brothers
+print(type(all_my_brothers)) # Imprime el tipo 
+all_my_brothers = tuple(all_my_brothers) # Cambia de lista a tupla
+print(type(all_my_brothers)) # Imprime el tipo 
+family_members = all_my_brothers 
 print(family_members)
 print(type(family_members))
 ```
@@ -258,7 +258,7 @@ print(family_members)
 print(type(family_members))
 ```
 
-6. Desempaca a los hermanos y padres de family_members
+6. Desempaca a los hermanos y padres de _family_members_
 
 ```py
 family_members = ('Efrain', 'Emma', 'Ismael', 'Esteban', 'Katerin', 'Luis')
@@ -269,7 +269,7 @@ my_parents = family_members[0:2]
 print(my_parents)
 ```
 
-7. Crea tuplas de frutas, verduras y productos de origen animal. Une las tres tuplas y asígnalas a una variable llamada food_stuff_tp.
+7. Crea tuplas de frutas, verduras y productos de origen animal. Une las tres tuplas y asígnalas a una variable llamada _food_stuff_tp._
 
 ```py
 fruits = ("Apple", "Orange", "Pear")
@@ -279,14 +279,14 @@ food_stuff_tp = fruits + vegetables + animals
 print(food_stuff_tp)
 ```
 
-8. Cambiar la tupla acerca de food_stuff_tp a una lista food_stuff_lt
+8. Cambiar la tupla acerca de food_stuff_tp a una lista _food_stuff_lt_
 
 ```py
 food_stuff_tp = list(food_stuff_tp)
 print(type(food_stuff_tp))
 ```
 
-9. Divida el elemento o elementos del medio de la food_stuff_tp tupla o lista de food_stuff_lt.
+9. Divida el elemento o elementos del medio de la food_stuff_tp tupla o lista de _food_stuff_lt._
 
 ```py
 food_stuff_tp = list(food_stuff_tp)
@@ -299,7 +299,7 @@ food_stuff_tp = tuple(food_stuff_tp)
 print(food_stuff_tp)
 ```
 
-10. Corta los tres primeros elementos y los tres últimos de food_staff_lt lista
+10. Corta los tres primeros elementos y los tres últimos de la lista _food_staff_lt_ 
 
 ```py
 food_stuff_tp = ('Apple', 'Orange', 'Pear', 'Potato', 'Onion', 'Corn', 'Horse', 'Pig', 'Duck')
@@ -310,14 +310,15 @@ last_elements = food_stuff_tp[-3:]
 print(last_elements)
 ```
 
-11. Elimine la tupla food_staff_tp por completo
+11. Elimine la tupla _food_staff_tp _por completo
 
 ```py
 food_stuff_tp = ('Apple', 'Orange', 'Pear', 'Potato', 'Onion', 'Corn', 'Horse', 'Pig', 'Duck')
 
 del food_stuff_tp
 
-# print(food_stuff_tp)
+print(food_stuff_tp) # Imprime: NameError: name 'food_stuff_tp' is not defined
+                     # Imprime que la tupla no esta definida. 
 ```
 
 12. Compruebe si un elemento existe en tupla:
