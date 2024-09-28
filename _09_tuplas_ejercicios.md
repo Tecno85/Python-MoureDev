@@ -107,20 +107,21 @@ print(food_stuff_tp)
 8. Cambiar la tupla acerca de food*stuff_tp a una lista \_food_stuff_lt*
 
 ```py
-food_stuff_tp = list(food_stuff_tp)
-print(type(food_stuff_tp))
+food_stuff_lt = list(food_stuff_tp)
+print(type(food_stuff_lt))
 ```
 
 9. Divida el elemento o elementos del medio de la food*stuff_tp tupla o lista de \_food_stuff_lt.*
 
 ```py
-food_stuff_tp = list(food_stuff_tp)
-print(len(food_stuff_tp))
-mid_index = len(food_stuff_tp) // 2
+food_stuff_tp = fruits + vegetables + animals
+food_stuff_lt = list(food_stuff_tp)
+print(len(food_stuff_lt))
+mid_index = len(food_stuff_lt) // 2
 print(mid_index)
-mid_element = food_stuff_tp[mid_index]
+mid_element = food_stuff_lt[mid_index]
 print(mid_element)
-food_stuff_tp = tuple(food_stuff_tp)
+food_stuff_tp = tuple(food_stuff_lt)
 print(food_stuff_tp)
 ```
 
@@ -152,15 +153,14 @@ print(food_stuff_tp) # Imprime: NameError: name 'food_stuff_tp' is not defined
 nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
 
 # Comprueba si 'Estonia' es un país nórdico
+print("Estonia" in nordic_countries)
 
 # Comprueba si 'Islandia' es un país nórdico
-
-print("Estonia" in nordic_countries)
 print("Iceland" in nordic_countries)
 ```
 
 ---
 
-[**`tuplas`**](/_08_tuplas.py)
-
-[**`Contendio`**](/notas.md)
+[**`Inicio`**](/notas.md)
+[**`-`**]()
+[**`tuplas`**](/_08_Tuplas.py)
