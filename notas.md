@@ -1,4 +1,4 @@
-![pythopn](./assets/img/Python_moderno.webp)
+![pythopn](./assets/img/Python_moderno_.webp)
 
 # _`print()`_
 
