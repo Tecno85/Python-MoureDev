@@ -1,6 +1,6 @@
-## ![fuego](/assets/img/icon_15.png) `Ejercicios` ![fuego](/assets/img/icon_15.png) 
+## `-Ejercicios-` ![fuego](/assets/img/icon_15.png)
 
-1. Crear una tupla vacia
+1. Crear una tupla vacia.
 
 ```py
 # Solución 1
@@ -10,7 +10,7 @@ my_tuple = ()
 my_other_tuple = tuple()
 ```
 
-2. Crea una tupla que contenga los nombres de tus hermanas y tus hermanos (los hermanos imaginarios están bien)
+2. Crea una tupla que contenga los nombres de tus hermanas y tus hermanos.
 
 ```py
 my_tuple = ("Katerin", "Ismael", "Esteban", "Emma")
@@ -40,14 +40,14 @@ Solución 1
 
 all_my_brothers = list(all_my_brothers) # Cambia de tupla a lista
 print(all_my_brothers)
-all_my_brothers.append("Efrain") # Agrega el elemento "Efrain"
+all_my_brothers.append("Efrain") # Agrega nombre del padre "Efrain"
 print(all_my_brothers)
-all_my_brothers.append("Emma") # Agrega el elemento "Emma"
+all_my_brothers.append("Emma") # Agrega nombre de la madre "Emma"
 print(all_my_brothers)
 print(type(all_my_brothers)) # Imprime el tipo
 all_my_brothers = tuple(all_my_brothers) # Cambia de lista a tupla
 print(type(all_my_brothers)) # Imprime el tipo
-family_members = all_my_brothers
+family_members = all_my_brothers # Asignando a "family_members"
 print(family_members)
 print(type(family_members))
 ```
@@ -104,14 +104,14 @@ food_stuff_tp = fruits + vegetables + animals
 print(food_stuff_tp)
 ```
 
-8. Cambiar la tupla acerca de food*stuff_tp a una lista \_food_stuff_lt*
+8. Cambiar la tupla acerca de food_stuff_tp a una lista de food_stuff_lt
 
 ```py
 food_stuff_lt = list(food_stuff_tp)
 print(type(food_stuff_lt))
 ```
 
-9. Divida el elemento o elementos del medio de la food*stuff_tp tupla o lista de \_food_stuff_lt.*
+9. Divida el elemento o elementos del medio de la food_stuff_tp tupla o lista de food_stuff_lt.
 
 ```py
 food_stuff_tp = fruits + vegetables + animals
