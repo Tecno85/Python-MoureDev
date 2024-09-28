@@ -163,4 +163,4 @@ print("Iceland" in nordic_countries)
 
 [**`Inicio`**](/notas.md)
 [**`-`**]()
-[**`tuplas`**](/_08_Tuplas.py)
+[**`tuplas`**](/tuplas.md)
