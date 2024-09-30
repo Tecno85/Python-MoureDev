@@ -44,7 +44,7 @@ Se accede a los elementos de un `set` mediante los bucles. El tema de bucles se 
 
 ### `Comprobación de elementos`
 
-Para comprobar si un elemento está presente en un `set`, se usa el operador `in`, el cual retornará `True` si está el elemento en el `set` o `False` si no lo está.
+Para comprobar si un elemento está presente en un `set`, se usa el operador `in`, el cual retornará `True` si el elemento está en el `set` o `False` si no lo está.
 
 ```py
 mi_set = {1, 2, 3, 4, 5}
@@ -73,7 +73,90 @@ print(6 not in mi_set) # Imprime: True
 Para agregar elementos a un `set`. Utilizamos el método `add()`.
 
 ```py
-mi_set = {1, 2, 3, 4, 5}
-mi_set.add(6) # Agega el número 6
-print(mi_set) # Imprime: {1, 2, 3, 4, 5, 6}
+mi_set = {1, 2, 3, 4, 5, 6}
+nuevos_numeros = (7, 8, 9 ,10, 11)
+mi_set.update(nuevos_numeros)
+print(mi_set) # Imprime: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
 ```
+
+Es posible agregar varios elementos a un set usando el método `update()`. El `update()` toma un argumento de lista.
+
+```py
+mi_set = {1, 2, 3, 4, 5, 6}
+
+# Agregando una tupa al set
+nueva_tupla = (7, 8, 9 ,10, 11)
+mi_set.update(nueva_tupla)
+print(mi_set) # Imprime: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}.
+
+# Agregando una lista al set
+nueva_lista = [12, 13, 14, 15, 16]
+mi_set.update(nueva_lista)
+print(mi_set) # Imprime: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16}
+
+# Agregando un set al set
+nuevo_set = {17, 18, 19, 20}
+mi_set.update(nuevo_set)
+print(mi_set) # Imprime: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+
+# Nota: Es posible incluir nuevos elementos en un set, los cuales pueden venir de listas, tuplas, set, etc.
+```
+
+### `Eliminación de elementos del set`
+
+El método `remove()`, elimina un elemento del set. Si no se encuentra el elemento, el método `remove()` genererá errores, por lo que es bueno verificar si el elemento esta presente en el `set`.
+
+```py
+mi_set = {1, 2, 3, 4, 5}
+
+# Cuando se conoce el elemento
+mi_set.remove(3)
+print(mi_set) # Imprime: {1, 2, 4, 5}
+
+# Cuando se elimina un elemento inexistente
+mi_set.remove(6)
+print(mi_set) # Imprime: KeyError/Errordeclave: 6
+```
+
+El método `discard()`, elimina un elemento del set, pero no genera error si el elemento no existe. 
+
+```py
+# Cuando se conoce el elemento
+mi_set = {1, 2, 3, 4, 5}
+mi_set.discard(4)
+print(mi_set) # Imprime: {1, 2, 3, 5}
+
+# Cuando se elimina un elemento inexistente
+mi_set = {1, 2, 3, 4, 5}
+mi_set.discard(6)
+print(mi_set) # Imprime: {1, 2, 3, 4, 5}
+```
+
+El método `clear()`, elimina o vacia todos los elementos del set.
+
+```py
+mi_set = {1, 2, 3, 4, 5}
+mi_set.clear()
+print(mi_set) # Impirme un set vacío: set()
+```
+
+El método `pop()` elimina un elemento aleatorio de la lista y devuelve el elemento eliminado.
+
+```py
+mi_set = {1, 2, 3, 4, 5}
+print(mi_set.pop()) # Imprime: 1
+print(mi_set) # Imprime: {2, 3, 4, 5}
+```
+
+El operador `del`, elimina el set completamente de la memoria.
+
+```py
+mi_set = {1, 2, 3, 4, 5}
+del mi_set
+# Intentar acceder al set después de eliminarlo, generará un error porque el set ya no existe
+print(mi_set) # Imprime: NameError: name 'mi_set' is not defined
+```
+
+### `Convertir una lista en set`
+
+Es posible convertir una `lista` en un `set` y un `set` en una `lista`. Al convertir la `lista` en `set`, se eliminan los duplicados y solo se reservarán los elementos únicos. 
