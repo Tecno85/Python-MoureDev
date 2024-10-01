@@ -475,3 +475,5 @@ China - Rusia - Estados Unidos - Finlandia - Suecia - Noruega - Dinamarca
 ---
 
 [**`tuplas`**](/tuplas.md)
+**-**
+[**`Sets`**](./_11_sets.md)

@@ -1,4 +1,4 @@
-# `Sets` ![icon_sets](/assets/img/icon_6.png)
+# `Sets` (Conjuntos) ![icon_sets](/assets/img/icon_6.png)
 
 Un **`set`**, es una colleción desordenada de elementos únicos. A diferencia de las listas o tuplas, los **`sets`** no permiten elementos duplicados y sus elementos no están indexados, lo que significa que no es posible acceder a un elemento específico mediante un índice.
 
@@ -42,7 +42,7 @@ print(len(mi_set)) # Imprime: 5
 
 Se accede a los elementos de un `set` mediante los bucles. El tema de bucles se trata más adelante.
 
-##  `Comprobación de elementos`
+## `Comprobación de elementos`
 
 Para comprobar si un elemento está presente en un `set`, se usa el operador `in`, el cual retornará `True` si el elemento está en el `set` o `False` si no lo está.
 
@@ -194,3 +194,164 @@ mi_set = set(mi_lista)
 print(type(mi_set)) # Imprime: <class 'set'>
 print(mi_set) # Imprime: {1, 3, 4, 5.5, 'Carlos'}
 ```
+
+## `Intercepción de elementos`
+
+Retorna un nuevo set con los elementos comunes a ambos sets.
+
+```py
+set_1 = {"Carlos", "Maria", "Santiago", 45, 90}
+set_2 = {90, 34, 89, "Carlos", "Maria"}
+inter_set = set_1.intersection(set_2)
+print(inter_set) # Imprime: {'Carlos', 90, 'Maria'}
+```
+
+```py
+python = {"p", "y", "t", "h", "o", "n"}
+dragon = {"d", "a", "g", "r", "o", "n"}
+interset = python.intersection(dragon)
+print(interset) # Imprime: {'n', 'o'}
+```
+
+## `Comprobación de subset y supersets`
+
+En Python, los conceptos de subsets (subconjuntos) y supersets (superconjuntos) se relacionan con las comparaciones entre sets para determinar si uno es un subconjunto o un superconjunto de otro.
+
+### `Subsets (Subconjuntos)`
+
+Un set A es un subconjunto de un set B si todos los elementos de A están también en B. En otras palabras, A está contenido en B.
+
+Podemos verificar si un `set` es un subconjnto de otro usando el método `issubset()` o el operador `<=`.
+
+```py
+setA = {1, 2, 3}
+setB = {1, 2, 3, 4, 5}
+
+# Verificar si setA es un subconjunto de setB
+print(setA.issubset(setB))  # True
+
+# Usando el operador <=
+print(setA <= setB)  # True
+```
+
+Si A es un subconjunto estricto de `B` (es decir, `A` está contenido en `B` pero `B` tiene elementos adicionales), puedes usar el operador `<:`
+
+```py
+setA = {1, 2, 3}
+setB = {1, 2, 3, 4, 5}
+
+# Verificar si setA es un subconjunto estricto de setB
+print(setA < setB)  # True
+```
+
+### `Supersets (Superconjuntos)`
+
+Un set `A` es un superconjunto de un set `B` si `A` contiene todos los elementos de `B`. En otras palabras, `A` es más grande o igual a `B`.
+
+Podemos verificar si un set es un superconjunto de otro usando el método `issuperset()` o el operador `>=`.
+
+```py
+setA = {1, 2, 3, 4, 5}
+setB = {1, 2, 3}
+
+# Verificar si setA es un superconjunto de setB
+print(setA.issuperset(setB))  # True
+
+# Usando el operador >=
+print(setA >= setB)  # True
+```
+
+Si `A` es un superconjunto estricto de `B` (es decir, `A` tiene elementos adicionales), puedes usar el operador `>:`
+
+```py
+setA = {1, 2, 3, 4, 5}
+setB = {1, 2, 3}
+
+# Verificar si setA es un superconjunto estricto de setB
+print(setA > setB)  # True
+```
+
+## `Diferencia entre sets`
+
+El método `difference()`, devuelve la diferencia entre dos `sets`
+
+```py
+set_1 = {"item1", "item2", "item3", "item4"}
+set_2 = {"item1", "item4"}
+set_difference = set_1.difference(set_2)
+print(set_difference) # Imprime: {'item2', 'item3'}
+
+numbers_1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+numbers_2 = {2, 4, 6, 8, 10}
+numbers_difference = numbers_1.difference(numbers_2)
+print(numbers_difference) # Imprime: {0, 1, 3, 5, 7, 9}
+
+python = {'p', 'y', 't', 'o','n'}
+dragon = {'d', 'r', 'a', 'g', 'o','n'}
+python_difference = python.difference(dragon)
+dragon_difference = dragon.difference(python)  
+print(python_difference) # Imprime: {'t', 'p', 'y'}
+print(dragon_difference) # Imprime: {'r', 'a', 'g', 'd'}
+```
+
+## `Diferencia simétrica entre sets`
+
+La diferencia simétrica entre dos `sets` `A` y `B` es el conjunto de los elementos que están en `A` o en `B`, pero no en ambos. Es decir, excluye los elementos que están en ambos `sets`.
+
+Podemos usar el método `symmetric_difference()` o el operador `^`.
+
+```py
+setA = {1, 2, 3, 4}
+setB = {3, 4, 5, 6}
+
+# Hallar la diferencia simétrica entre setA y setB
+diferencia_simetrica = setA.symmetric_difference(setB)
+print(diferencia_simetrica)  # {1, 2, 5, 6}
+
+# Usando el operador '^'
+diferencia_simetrica = setA ^ setB
+print(diferencia_simetrica)  # {1, 2, 5, 6}
+```
+
+En este caso, la diferencia simétrica contiene los elementos que están en setA o setB, pero no en ambos (1, 2, 5, 6). 
+
+`Diferencia simétrica:` A ^ B (elementos que no se comparten entre A y B).
+
+## `Sets disjuntos`
+
+El método `isdisjoint()` se utiliza para comprobar si dos `sets`(o un `set` y cualquier otro iterable) son disjuntos, es decir, si no tiene elementos en común. 
+
+- Si los `sets` no tienen ningún elemento en común, entonces son `disjuntos`, y el método `isdisjoint()` devolverá `True.`
+
+- Si tiene al menos un elemento en común, devolverá `False`
+
+```py
+setA = {1, 2, 3}
+setB = {4, 5, 6}
+setC = {2, 4, 6}
+
+# Comprobar si setA y setB son disjuntos
+print(setA.isdisjoint(setB))  # True, no tienen elementos en común
+
+# Comprobar si setA y setC son disjuntos
+print(setA.isdisjoint(setC))  # False, tienen en común el número 2
+```
+
+`¿Se puede usar con otros iterables?`
+
+Sí, es posible usar `isdisjoint()` con otros tipos de iterables (como listas, tuplas, etc.), no solo con sets.
+
+```py
+setA = {1, 2, 3}
+lista = [4, 5, 6] # Ejemplo con lista
+
+print(setA.isdisjoint(lista))  # True, no tienen elementos en común
+```
+
+`Nota:`
+
+Los sets en Python son útiles cuando necesitas colecciones de elementos únicos y no te importa el orden de los mismos. Son perfectos para realizar operaciones como uniones, intersecciones y diferencias entre colecciones.
+
+[**`Inicio`**](./notas.md)
+**-**
+[**`Ejercicios`**](./_12_sets_ejercicios.md)
