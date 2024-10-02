@@ -1,4 +1,12 @@
-# `Ejercicios Sets`
+
+# ![Icono](./assets/img/icon_1.png) `Ejercicios Sets` ![Icono](./assets/img/icon_7.png)
+
+```py
+it_companies = {'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'}
+A = {19, 22, 24, 20, 25, 26}
+B = {19, 22, 20, 25, 26, 24, 28, 27}
+age = [22, 19, 24, 25, 26, 24, 25, 24]
+```
 
 1. Encuentre la longitud del conjunto it_companies
 
@@ -29,8 +37,6 @@
 1. Explique la diferencia entre los siguientes tipos de datos: cadena, lista, tupla y conjunto
 
 1. Soy profesora y me encanta inspirar y enseñar a la gente. ¿Cuántas palabras únicas se han utilizado en la oración?. Utilice los métodos de división y conjunto para obtener las palabras únicas.
-
-___
 
 ---
 
