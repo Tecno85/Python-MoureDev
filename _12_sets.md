@@ -352,6 +352,6 @@ print(setA.isdisjoint(lista))  # True, no tienen elementos en común
 
 Los sets en Python son útiles cuando necesitas colecciones de elementos únicos y no te importa el orden de los mismos. Son perfectos para realizar operaciones como uniones, intersecciones y diferencias entre colecciones.
 
-[**`Inicio`**](./notas.md)
+[**`Inicio`**](./README.md)
 **-**
-[**`Ejercicios`**](./_12_sets_ejercicios.md)
+[**`Ejercicios Sets`**](./_12_sets_ejercicios.md)
