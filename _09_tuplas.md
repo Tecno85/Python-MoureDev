@@ -176,6 +176,6 @@ print(my_tupla.index(4)) # Imprime: "3", este corresponde al elemento "4", el cu
 
 ---
 
-[**`Inicio`**](/notas.md)
+[**`Inicio`**](/README.md)
 **-**
 [**`Ejercicios tuplas`**](/_09_tuplas_ejercicios.md)

@@ -31,3 +31,7 @@ Python se utiliza en diversas áreas, como:
 - **_Automatización y Scripts_**: Python es ideal para escribir scripts que automatizan tareas repetitivas.
 
 - **_Desarrollo de Juegos_**: Con bibliotecas como Pygame, puedes crear juegos en 2D.
+
+[**`Tuplas`**](/_09_tuplas.md)
+**-**
+[**`Ejercicios Tuplas`**](/_10_tuplas_ejercicios.md)
