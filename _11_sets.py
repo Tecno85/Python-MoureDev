@@ -1,13 +1,8 @@
-A = {19, 22, 24, 20, 25, 26}
-B = {19, 22, 20, 25, 26, 24, 28, 27}
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+print(len(ages)) # Imprime: 8
+ages_set = set(ages) # convierte la lista a set
+print(type(ages_set)) # Imprime: <class 'set'>
+print(ages_set) # Imprime: {19, 22, 24, 25, 26}
+print(len(ages_set)) # Imprime: 5
 
-union_A_B = A.union(B)
-print(union_A_B)
-union_B_A = B.union(A)
-print(union_B_A)
-
-
-
-
-
-
+# Nota: La lista posee una mayor longitud o cantidad de elementos que el set, dado de los set no permiten elementos duplicados

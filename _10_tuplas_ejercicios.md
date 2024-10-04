@@ -1,6 +1,6 @@
 # `Ejercicios Tuplas` ![fuego](/assets/img/icon_15.png)
 
-1. Crear una tupla vacia.
+**1. Crear una tupla vacia.**
 
 ```py
 # Solución 1
@@ -10,13 +10,13 @@ my_tuple = ()
 my_other_tuple = tuple()
 ```
 
-2. Crea una tupla que contenga los nombres de tus hermanas y tus hermanos.
+**2. Crea una tupla que contenga los nombres de tus hermanas y tus hermanos.**
 
 ```py
 my_tuple = ("Katerin", "Ismael", "Esteban", "Emma")
 ```
 
-3. Unir tuplas de hermanos y hermanas y asignarlas a hermanos
+**3. Unir tuplas de hermanos y hermanas y asignarlas a hermanos**
 
 ```py
 my_brothers = ("Ismael", "Esteban")
@@ -26,14 +26,14 @@ all_my_brothers = (my_brothers + my_sisters)
 print(all_my_brothers)
 ```
 
-4. ¿Cuántos hermanos tienes?
+**4. ¿Cuántos hermanos tienes?**
 
 ```py
 number_of_siblings = len(all_my_brothers)
 print(number_of_siblings)
 ```
 
-5. Modifique la tupla de hermanos y agregue el nombre de su padre y madre y asígnelo a _family_members_
+**5. Modifique la tupla de hermanos y agregue el nombre de su padre y madre y asígnelo a _family_members_**
 
 ```py
 Solución 1
@@ -83,7 +83,7 @@ print(family_members)
 print(type(family_members))
 ```
 
-6. Desempaca a los hermanos y padres de _family_members_
+**6. Desempaca a los hermanos y padres de _family_members_**
 
 ```py
 family_members = ('Efrain', 'Emma', 'Ismael', 'Esteban', 'Katerin', 'Luis')
@@ -94,7 +94,7 @@ my_parents = family_members[0:2]
 print(my_parents)
 ```
 
-7. Crea tuplas de frutas, verduras y productos de origen animal. Une las tres tuplas y asígnalas a una variable llamada _food_stuff_tp._
+**7. Crea tuplas de frutas, verduras y productos de origen animal. Une las tres tuplas y asígnalas a una variable llamada _food_stuff_tp._**
 
 ```py
 fruits = ("Apple", "Orange", "Pear")
@@ -104,14 +104,14 @@ food_stuff_tp = fruits + vegetables + animals
 print(food_stuff_tp)
 ```
 
-8. Cambiar la tupla acerca de food_stuff_tp a una lista de food_stuff_lt
+**8. Cambiar la tupla acerca de food_stuff_tp a una lista de food_stuff_lt**
 
 ```py
 food_stuff_lt = list(food_stuff_tp)
 print(type(food_stuff_lt))
 ```
 
-9. Divida el elemento o elementos del medio de la food_stuff_tp tupla o lista de food_stuff_lt.
+**9. Divida el elemento o elementos del medio de la food_stuff_tp tupla o lista de food_stuff_lt.**
 
 ```py
 food_stuff_tp = fruits + vegetables + animals
@@ -125,7 +125,7 @@ food_stuff_tp = tuple(food_stuff_lt)
 print(food_stuff_tp)
 ```
 
-10. Corta los tres primeros elementos y los tres últimos de la lista _food_staff_lt_
+**10. Corta los tres primeros elementos y los tres últimos de la lista _food_staff_lt_**
 
 ```py
 food_stuff_tp = ('Apple', 'Orange', 'Pear', 'Potato', 'Onion', 'Corn', 'Horse', 'Pig', 'Duck')
@@ -136,7 +136,7 @@ last_elements = food_stuff_tp[-3:]
 print(last_elements)
 ```
 
-11. Elimine la tupla \_food_staff_tp \_por completo
+**11. Elimine la tupla \_food_staff_tp \_por completo**
 
 ```py
 food_stuff_tp = ('Apple', 'Orange', 'Pear', 'Potato', 'Onion', 'Corn', 'Horse', 'Pig', 'Duck')
@@ -147,7 +147,7 @@ print(food_stuff_tp) # Imprime: NameError: name 'food_stuff_tp' is not defined
                      # Imprime que la tupla no esta definida.
 ```
 
-12. Compruebe si un elemento existe en tupla:
+**12. Compruebe si un elemento existe en tupla:**
 
 ```py
 nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
