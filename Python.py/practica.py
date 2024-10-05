@@ -1,17 +1,13 @@
-# **15. Soy profesora y me encanta inspirar y enseñar a la gente. (I am a teacher and I love to inspire and teach people). ¿Cuántas palabras únicas se han utilizado en la oración?. Utilice los métodos de división (split()) y conjunto (set()) para obtener las palabras únicas.**
+persona = {
+    "nombre": "Ivan",
+    "edad": 39,
+    "ciudad": "Valledupar"
+}
 
-# Frase Inicial
-frase = "I am a teacher and I love to inspire and teach people"
-print("Frase original: ", frase)
+print(persona["edad"]) # Imprime: 39
+print(persona.get("nombre")) # Imprime: Ivan
 
-# División de frase en palabras
-frase_dividida = frase.split()
-print("Palabras divididas: ", frase_dividida)
+# Ejemplo cuando la clave no existe
+print(persona.get("altura")) # Imprime: None
+print(persona["altura"]) # Imprime: KeyError: 'altura'
 
-# Creación de conjunto de palabras únicas
-set_de_frase = set(frase_dividida)
-print("Palabras únicas: ", set_de_frase)
-
-# Conteo de palabras únicas
-cantidad_unicas = len(set_de_frase)
-print(cantidad_unicas)
