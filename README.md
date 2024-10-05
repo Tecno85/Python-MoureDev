@@ -35,3 +35,5 @@ Python se utiliza en diversas áreas, como:
 [**`Tuplas`**](/_09_tuplas.md)
 **-**
 [**`Ejercicios Tuplas`**](/_10_tuplas_ejercicios.md)
+
+`Tiempo: 4:34`
