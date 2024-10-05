@@ -1,13 +1,9 @@
 persona = {
     "nombre": "Ivan",
     "edad": 39,
-    "ciudad": "Valledupar"
+    "ciudad": "Valledupar",
+    "es_casado": True,
 }
 
-print(persona["edad"]) # Imprime: 39
-print(persona.get("nombre")) # Imprime: Ivan
-
-# Ejemplo cuando la clave no existe
-print(persona.get("altura")) # Imprime: None
-print(persona["altura"]) # Imprime: KeyError: 'altura'
-
+valores = persona.values()
+print(valores) # Imprime: dict_values(['Ivan', 39, 'Valledupar', True])

@@ -2,7 +2,7 @@
 
 Un `diccionario` en Python es una colección de datos desordenada, mutable (puede cambiar), y indexada por llaves (`keys`) únicas. A diferencia de las listas o tuplas, que utilizan índices numéricos para acceder a los elementos, los diccionarios usan claves para acceder a los valores.
 
-Los diccionarios se definen usando llaves `{}`, y cada elemento dentro del diccionario es un par `clave-valor`.
+Los diccionarios se definen usando llaves `{}`, y cada elemento dentro del diccionario es un par `clave:valor`.
 
 ## `Creación de un diccionario`
 
@@ -11,7 +11,7 @@ Para crear un diccionario usamos **_llaves_**, **`{}`** o la función incorporad
 ```py
 # sintaxis
 mi_diccionario = {}
-m_otro_diccionario = dict()
+mi_otro_diccionario = dict()
 
 mi_diccionario = {
     "clave1": "valor1",
@@ -77,4 +77,164 @@ print(persona.get("altura")) # Imprime: None
 print(persona["altura"]) # Imprime: KeyError: 'altura'
 ```
 
-Al acceder a un elemento por nombre de clave, se genera un error si la clave no existe. Para evitar este error primero tenemos que comprobar si existe una clave o podemos utilizar el métod **`get()`**
+Al acceder a un elemento por nombre de clave, se genera un error si la clave no existe. Para evitar este error primero tenemos que comprobar si existe una clave o podemos utilizar el métod **`get()`**. El método **`get()`** devuelve `None`, que es un tipo de datos de objeto `NoneType`, si la clave no existe.
+
+## `Adición o Modificación de elementos a un diccionario`
+
+Los diccionarios son mutables, esta propiedad nos permite argregar nuevos pares `clave:valor` o modificar valores existentes.
+
+```py
+persona = {
+    "nombre": "Ivan",
+    "edad": 39,
+    "ciudad": "Valledupar"
+}
+
+# Agregar un nuevo par clave:valor
+persona["profesión"] = "Ingeniero"
+
+# Modificar el valor de una variable existente
+persona["ciudad"] = "Medellin"
+
+print(persona) # Imprime: {'nombre': 'Ivan', 'edad': 39, 'ciudad': 'Medellin', 'profesión': 'Ingeniero'}
+```
+
+## `Eliminación de pares clave:valor en un diccionario`
+
+Existen varias forma para eliminar un elemento específico, estas son:
+
+- Instrucción **`del`**, elimina un elemento con el nombre de clave especificado.
+- Método **`pop()`** elimina un elemento con el nombre de clave especificado.
+- Método **`popitem()`**, elimina y devuelve el último par clave:valor agregado.
+
+```py
+persona = {
+    "nombre": "Ivan",
+    "edad": 39,
+    "ciudad": "Valledupar",
+    "es_casado": True,
+    "habilidades": ["HTML", "CSS", "Markdown", "GitHub", "Python"]
+}
+
+del persona["ciudad"]
+print(persona) # Imprime: {'nombre': 'Ivan', 'edad': 39}
+
+persona.pop("nombre")
+print(persona) # Imprime: {'edad': 39}
+
+# Nota: Este print nos devuelve el ultimo elemento eliminado("habilidades") por popitem()
+print(persona.popitem()) # Imprime: ('habilidades', ['HTML', 'CSS', 'Markdown', 'GitHub', 'Python'])
+print(persona) # Imprime: {'edad': 39, 'es_casado': True}
+```
+
+## `Eliminar un diccionario`
+
+Si no usamos el diccionario podemos eliminarlo por completo mediante la instrucción **`del`**
+
+```py
+persona = {
+    "nombre": "Ivan",
+    "edad": 39,
+    "ciudad": "Valledupar",
+    "es_casado": True,
+}
+
+del persona
+print(persona) # Imprime: NameError: name 'persona' is not defined
+```
+
+## `Borrar un diccionario`
+
+Si no queremos los elementos de un diccionario, podemos borrarlos usando el método **`clear()`**
+
+```py
+persona = {
+    "nombre": "Ivan",
+    "edad": 39,
+    "ciudad": "Valledupar",
+    "es_casado": True,
+}
+
+print(persona.clear()) # Imprime: None
+```
+
+## `Copiar un diccionario`
+
+Podemos copiar un diccionario usando un método **`copy()`**. Con este método podemos evitar la mutación del diccionario original.
+
+```py
+persona = {
+    "nombre": "Ivan",
+    "edad": 39,
+    "ciudad": "Valledupar",
+    "es_casado": True,
+}
+
+copia_persona = persona.copy()
+print(copia_persona) # Imprime: {'nombre': 'Ivan', 'edad': 39, 'ciudad': 'Valledupar', 'es_casado': True}
+```
+
+## `Comprobación de claves en un diccionario`
+
+El operador **`in`** se utiliza para verificar si existe una clave en un diccionario.
+
+```py
+persona = {
+    "nombre": "Ivan",
+    "edad": 39,
+    "ciudad": "Valledupar",
+    "es_casado": True,
+    "habilidades": ["HTML", "CSS", "Markdown", "GitHub", "Python"]
+}
+
+print("nombre" in persona) # Imprime: True
+print("estatura" in persona) # Imprime: False
+print("es_casado" in persona) # Imprime: True
+```
+
+## `Cambiar el diccionario a una lista de elementos`
+
+El método **`items()`** cambia el diccionario a una lista de tuplas con pares clave:valor.
+
+```py
+persona = {
+    "nombre": "Ivan",
+    "edad": 39,
+    "ciudad": "Valledupar",
+    "es_casado": True,
+}
+
+print(persona.items()) # Imprime: dict_items([('nombre', 'Ivan'), ('edad', 39), ('ciudad', 'Valledupar'), ('es_casado', True)])
+```
+
+## `Obtener claves de diccionario como un lista`
+
+El método **`keys()`** nos da todas las claves de un diccionario cmo una lista.
+
+```py
+persona = {
+    "nombre": "Ivan",
+    "edad": 39,
+    "ciudad": "Valledupar",
+    "es_casado": True,
+}
+
+claves = persona.keys()
+print(claves) # Imprime: dict_keys(['nombre', 'edad', 'ciudad', 'es_casado'])
+```
+
+## `Obtener valores de diccionario como un lista`
+
+El método **`values()`** nos da todas los valores de un diccionario como una lista.
+
+```py
+persona = {
+    "nombre": "Ivan",
+    "edad": 39,
+    "ciudad": "Valledupar",
+    "es_casado": True,
+}
+
+valores = persona.values()
+print(valores) # Imprime: dict_values(['Ivan', 39, 'Valledupar', True])
+```
