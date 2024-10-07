@@ -40,7 +40,7 @@ En este caso, **`"nombre"`**, **`"edad"`** y **`"ciudad"`** son las claves y **`
 
 ## `Longitud del dicionario`
 
-El método **`len()`**, comprueba el número de pares **`clave: valor`** en el diccionario.
+El método **`len()`**, comprueba el número de pares **`clave:valor`** en el diccionario.
 
 ```py
 persona = {
@@ -77,11 +77,11 @@ print(persona.get("altura")) # Imprime: None
 print(persona["altura"]) # Imprime: KeyError: 'altura'
 ```
 
-Al acceder a un elemento por nombre de clave, se genera un error si la clave no existe. Para evitar este error primero tenemos que comprobar si existe una clave o podemos utilizar el métod **`get()`**. El método **`get()`** devuelve `None`, que es un tipo de datos de objeto `NoneType`, si la clave no existe.
+Al acceder a un elemento por nombre de clave, se genera un error si la clave no existe. Para evitar este error primero tenemos que comprobar si existe una clave o podemos utilizar el métod **`get()`**. El método **`get()`** devuelve **`None`**, que es un tipo de datos de objeto **`NoneType`**, si la clave no existe.
 
 ## `Adición o Modificación de elementos a un diccionario`
 
-Los diccionarios son mutables, esta propiedad nos permite argregar nuevos pares `clave:valor` o modificar valores existentes.
+Los diccionarios son mutables, esta propiedad nos permite argregar nuevos pares **`clave:valor`** o modificar valores existentes.
 
 ```py
 persona = {
@@ -122,7 +122,7 @@ print(persona) # Imprime: {'nombre': 'Ivan', 'edad': 39}
 persona.pop("nombre")
 print(persona) # Imprime: {'edad': 39}
 
-# Nota: Este print nos devuelve el ultimo elemento eliminado("habilidades") por popitem()
+# Nota: Este print nos devuelve el último elemento eliminado("habilidades") por popitem()
 print(persona.popitem()) # Imprime: ('habilidades', ['HTML', 'CSS', 'Markdown', 'GitHub', 'Python'])
 print(persona) # Imprime: {'edad': 39, 'es_casado': True}
 ```
@@ -194,7 +194,7 @@ print("es_casado" in persona) # Imprime: True
 
 ## `Cambiar el diccionario a una lista de elementos`
 
-El método **`items()`** cambia el diccionario a una lista de tuplas con pares clave:valor.
+El método **`items()`** cambia el diccionario a una lista de tuplas con pares **`clave:valor`**.
 
 ```py
 persona = {
@@ -209,7 +209,7 @@ print(persona.items()) # Imprime: dict_items([('nombre', 'Ivan'), ('edad', 39), 
 
 ## `Obtener claves de diccionario como un lista`
 
-El método **`keys()`** nos da todas las claves de un diccionario cmo una lista.
+El método **`keys()`** nos da todas las claves de un diccionario como una lista.
 
 ```py
 persona = {

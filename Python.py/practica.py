@@ -1,9 +1,12 @@
-persona = {
-    "nombre": "Ivan",
-    "edad": 39,
-    "ciudad": "Valledupar",
-    "es_casado": True,
-}
+# Cree un diccionario de estudiante y agregue first_name, last_name, sexo, edad, estado civil, habilidades, país, ciudad y dirección como claves para el diccionario
 
-valores = persona.values()
-print(valores) # Imprime: dict_values(['Ivan', 39, 'Valledupar', True])
+estudiantes = dict(
+    nombre="Ivan",
+    apellido="Madrid",
+    sexo="Masculino",
+    estado_civil="casado",
+    habilidades={"Html", "CSS", "JavaScript", "Python"},
+    pais="Colombia",
+    ciudad="Valledupar",
+    direccion="Mirador de la sierra 2",
+)
