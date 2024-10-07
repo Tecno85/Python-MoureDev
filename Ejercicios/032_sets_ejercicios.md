@@ -1,4 +1,4 @@
-# ![Icono](./assets/img/icon_1.png) `Ejercicios Sets` ![Icono](./assets/img/icon_7.png)
+# ![Icono](/assets/img/icon_1.png) `Ejercicios Sets` ![Icono](/assets/img/icon_7.png)
 
 ```py
 it_companies = {'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'}
@@ -159,7 +159,7 @@ print(len(ages_set)) # Imprime: 5 elementos
 
 **14. Explique la diferencia entre los siguientes tipos de datos: cadena, lista, tupla y conjunto**
 
-![Imagen Tablas](./assets/img/Imagen%20tabla.png)
+![Imagen Tablas](/assets/img/Imagen%20tabla.png)
 
 **`Diferencias`**
 
