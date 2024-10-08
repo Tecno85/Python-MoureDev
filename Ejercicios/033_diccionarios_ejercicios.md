@@ -115,8 +115,70 @@ lista_valores = alumno.values()
 print(lista_valores) # Imprime: dict_values(['Ismael', 'Madrid', ['HTML', 'CSS', 'Python']])
 ```
 
-9.  Cambie el diccionario a una lista de tuplas usando el método items()
+**9. Cambie el diccionario a una lista de tuplas usando el método items()**.
 
-10. Eliminar uno de los elementos del diccionario
+```py
+alumno = {
+    "nombre": "Ismael",
+    "Apellido": "Madrid",
+    "habilidades": ["HTML", "CSS", "Python"]
+}
 
-11. Eliminar uno de los diccionarios
+print(type(alumno)) 
+# Imprime: <class 'dict'>
+print(alumno)  
+# Imprime: {'nombre': 'Ismael', 'Apellido': 'Madrid', 'habilidades': ['HTML', 'CSS', 'Python']} 
+lista_tuplas = alumno.items()
+print(lista_tuplas)
+# Imprime: dict_items([('nombre', 'Ismael'), ('Apellido', 'Madrid'), ('habilidades', ['HTML', 'CSS', 'Python'])])
+print(type(lista_tuplas)) 
+# Imprime: <class 'dict_items'>
+
+# Convertir la vista dict_item a una lista con el constructor "list"
+lista_tuplas = list(alumno.items())
+print(lista_tuplas) 
+# Imprime: [('nombre', 'Ismael'), ('Apellido', 'Madrid'), ('habilidades', ['HTML', 'CSS', 'Python'])]
+print(type(lista_tuplas))
+# Imprime: <class 'list'>
+```
+
+**10. Eliminar uno de los elementos del diccionario**.
+
+```py
+alumno = {
+    "nombre": "Ismael",
+    "Apellido": "Madrid",
+    "sexo": "Masculino",
+    "habilidades": ["HTML", "CSS", "Python"],
+    "estatura": 1.64
+}
+
+del alumno["estatura"]
+print(alumno)
+# Imprime: {'nombre': 'Ismael', 'Apellido': 'Madrid', 'sexo': 'Masculino', 'habilidades': ['HTML', 'CSS', 'Python']}
+
+alumno.pop("habilidades")
+print(alumno)
+# Imprime: {'nombre': 'Ismael', 'Apellido': 'Madrid', 'sexo': 'Masculino'}
+
+alumno.popitem()
+print(alumno)
+# Imprime: {'nombre': 'Ismael', 'Apellido': 'Madrid'}
+```
+
+**11. Eliminar uno de los diccionarios**.
+
+```py
+alumno = {
+    "nombre": "Ismael",
+    "Apellido": "Madrid",
+    "sexo": "Masculino",
+    "habilidades": ["HTML", "CSS", "Python"],
+    "estatura": 1.64,
+    "familia": {"hijo_menor": "Esteban", "hijo_mayor": "Ismael", "Esposa": "Katerin", "mama": "Emma"}
+}
+
+del alumno["familia"]
+print(alumno)
+# Imprime: {'nombre': 'Ismael', 'Apellido': 'Madrid', 'sexo': 'Masculino', 'habilidades': ['HTML', 'CSS', 'Python'], 'estatura': 1.64}
+```

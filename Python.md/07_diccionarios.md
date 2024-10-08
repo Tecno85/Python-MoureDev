@@ -104,7 +104,7 @@ print(persona) # Imprime: {'nombre': 'Ivan', 'edad': 39, 'ciudad': 'Medellin', '
 Existen varias forma para eliminar un elemento específico, estas son:
 
 - Instrucción **`del`**, elimina un elemento con el nombre de clave especificado.
-- Método **`pop()`** elimina un elemento con el nombre de clave especificado.
+- Método **`pop()`** elimina y devuelve un elemento con el nombre de clave especificado.
 - Método **`popitem()`**, elimina y devuelve el último par clave:valor agregado.
 
 ```py
@@ -119,7 +119,7 @@ persona = {
 del persona["ciudad"]
 print(persona) # Imprime: {'nombre': 'Ivan', 'edad': 39}
 
-persona.pop("nombre")
+persona.pop("nombre") # Imprime: Ivan
 print(persona) # Imprime: {'edad': 39}
 
 # Nota: Este print nos devuelve el último elemento eliminado("habilidades") por popitem()
@@ -207,6 +207,42 @@ persona = {
 print(persona.items()) # Imprime: dict_items([('nombre', 'Ivan'), ('edad', 39), ('ciudad', 'Valledupar'), ('es_casado', True)])
 ```
 
+Cuando llamas al método `items()` en un diccionario, no se devuelve una lista directamente, sino un objeto especial llamado **`dict_items`**. Este tipo de objeto es una **vista** de los pares `(clave, valor)` del diccionario.
+
+Una **vista** en Python es un objeto que refleja los datos del diccionario de manera eficiente, sin duplicarlos en memoria. Es una representación dinámica: si el diccionario cambia, la vista también reflejará esos cambios.
+
+### Características principales
+
+1. **No es una lista**: Aunque parece una lista de tuplas, es un tipo de objeto especial que puedes iterar, pero no es modificable como una lista normal.
+   
+2. **Dinamismo**: Si modificas el diccionario, el objeto `dict_items` cambiará automáticamente para reflejar esos cambios.
+   
+3. **Iterabilidad**: Puedes recorrerlo con un bucle `for`, igual que harías con una lista.
+
+```python
+mi_diccionario = {"nombre": "Ana", "edad": 25, "ciudad": "Madrid"}
+
+# Obtener una vista dict_items
+items_vista = mi_diccionario.items()
+
+print(items_vista)
+# Imprime: dict_items([('nombre', 'Ana'), ('edad', 25), ('ciudad', 'Madrid')])
+```
+
+### `¿Por qué no es directamente una lista?`
+
+La razón por la que `items()` devuelve un `dict_items` en lugar de una lista es por **eficiencia**. Como los diccionarios pueden ser muy grandes, la vista `dict_items` es más ligera en términos de memoria porque no duplica el contenido del diccionario, solo lo "refleja".
+
+### Convertir `dict_items` a lista:
+
+Si realmente necesitas trabajar con una lista (por ejemplo, si deseas modificarla o acceder a los elementos por índices), puedes convertir el `dict_items` a una lista con el constructor `list()`.
+
+```python
+lista_tuplas = list(mi_diccionario.items())
+print(lista_tuplas)
+# Imprime: [('nombre', 'Ana'), ('edad', 25), ('ciudad', 'Madrid')]
+```
+
 ## `Obtener claves de diccionario como un lista`
 
 El método **`keys()`** nos da todas las claves de un diccionario como una lista.
@@ -238,3 +274,5 @@ persona = {
 valores = persona.values()
 print(valores) # Imprime: dict_values(['Ivan', 39, 'Valledupar', True])
 ```
+
+
