@@ -139,9 +139,16 @@ print(company[10])
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
-> .[!Notas].
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
 > 
-> Ejemplo
+
+
 # El caracter que se encuentra en el indice 10 es un espacio en blanco.
 
 # 19. Crea un acrónimo o una abreviatura para el nombre 'Python For Everyone'.
