@@ -146,7 +146,7 @@ print(company[10])
 > Helpful advice for doing things better or more easily.
 
 > [!IMPORTANT]
-> 
+> Helpful advice for doing things better or more easily.
 
 
 # El caracter que se encuentra en el indice 10 es un espacio en blanco.
