@@ -1,40 +1,70 @@
+# `Ejercicios String` ![Icon String](/assets/img/icon_13.png)
 
-# 2. Concatene la cadena 'Coding', 'For', 'All' en una sola cadena, 'Coding For All'.
+**1. Concatene la cadena `'Thirty'`, `'Days'`, `'Of'`, `'Python'` en una sola cadena, `'Thirty Days Of Python'`**.
 
+```py
+thirty = "Thirty"
+days = "Days"
+of = "of"
+python = "Python"
+
+print(thirty + " " + days + " " + of + " " + python)  # concatenación
+print("%s %s %s %s" %(thirty, days, of, python))  # interpolación con módulo (%)
+print("{} {} {} {}".format(thirty, days, of, python))  # método .format
+print(f"{thirty} {days} {of} {python}")  # f-string
+```
+
+**2. Concatene la cadena `'Coding'`, `'For'`, `'All'` en una sola cadena, `'Coding For All'`**.
+
+```py
 palabra_1 = "Coding"
 palabra_2 = "For"
 palabra_3 = "All"
 
 print(f"{palabra_1} {palabra_2} {palabra_3}")
+```
 
-# 3. Declare una variable denominada company y asígnela a un valor inicial "Coding For All".
+**3. Declare una variable denominada company y asígnela a un valor inicial `"Coding For All"`**.
 
+```py
 company = "Coding For ALL"
+```
 
-# 4. Imprime la variable company usando print().
+**4. Imprime la variable company usando `print()`**.
 
+```py
 print(company)
+```
 
-# 5. Imprima la longitud de la cadena de la empresa utilizando el método len() y print().
+**5. Imprima la longitud de la cadena de la empresa utilizando el método `len()` y `print()`**.
 
+```py
 print(len(company))
+```
 
-# 6. Cambie todos los caracteres a letras mayúsculas usando el método upper().
+**6. Cambie todos los caracteres a letras mayúsculas usando el método `upper()`**.
 
+```py
 print(company.upper())
+```
 
-# 7. Cambie todos los caracteres a letras minúsculas usando el método lower().
+**7. Cambie todos los caracteres a letras minúsculas usando el método `lower()`**.
 
+```py
 print(company.lower())
+```
 
-# 8. Utilice los métodos capitalize(), title(), swapcase() para formatear el valor de la cadena Coding For All
+**8. Utilice los métodos `capitalize()`, `title()`, `swapcase()` para formatear el valor de la cadena `Coding For All`**.
 
+```py
 print(company.capitalize())
 print(company.title())
 print(company.swapcase())
+```
 
-# 9. Corta la primera palabra de la cadena Coding For All.
+**9. Corta la primera palabra de la cadena Coding For All**.
 
+```py
 company = "Coding For ALL"
 
 first_word = company.split()[0]
@@ -42,55 +72,76 @@ print(first_word)
 
 first_word = company.split()[2]
 print(first_word)
+```
 
-# 10. Compruebe si la cadena Codificación para todos contiene una palabra Codificación mediante el método index, find u otros métodos.
+**10. Compruebe si la cadena Codificación para todos contiene una palabra Codificación mediante el método `index()`, `find()` u otros métodos**.
 
+```py
 company = "Coding For ALL"
 print(company.find("Coding"))
 
 print(company.index("Coding"))
+```
 
-# 11. Reemplace la palabra codificación en la cadena 'Coding For All' a Python.
+**11. Reemplace la palabra codificación en la cadena `'Coding For All'` a Python**.
 
+```py
 company = "Coding For ALL"
 
 print(company.replace("Coding", "Python"))
+```
 
-# 12. Cambie Python para todos a Python para todos mediante el método replace u otros métodos.
+**12. Cambie Python para todos a Python para todos mediante el método replace u otros métodos**.
 
+```py
 message = "Python For Everyone"
 print(message.replace("Everyone", "All"))
+```
 
-# 13. Divida la cadena 'Coding For All' usando el espacio como separador (split())
+**13. Divida la cadena 'Coding For All' usando el espacio como separador `(split())`**.
 
+```py
 company = "Coding For All"
 print(company.split())
+```
 
-# 14. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" dividió la cadena en la coma.
+**14. `"Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"` dividió la cadena en la coma**.
 
+```py
 companies = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
 print(companies)
 print(companies.split(", "))
+```
 
-# 16. ¿Cuál es el carácter en el índice 0 en la cadena Codificación para todos?
+**16. ¿Cuál es el carácter en el índice 0 en la cadena Codificación para todos?**.
 
+```py
 company = "Coding For All"
 print(company[0])
+```
 
-# 17. ¿Cuál es el último índice de la cadena Coding For All?
+**17. ¿Cuál es el último índice de la cadena Coding For All?**.
 
+```py
 company = "Coding For All"
 print(len(company))
 
 ultimo_indice = len(company) - 1
 print(ultimo_indice)
+```
+> Note: `--Ivan` es un desarrollador excelente.
 
-# 18. Qué carácter está en el índice 10 en la cadena "Codificación para todos".
+**1.  Qué carácter está en el índice 10 en la cadena "Codificación para todos"**.
 
 company = "Coding For All"
 
 print(company[10])
 
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+
+> .[!Notas].
+> 
+> Ejemplo
 # El caracter que se encuentra en el indice 10 es un espacio en blanco.
 
 # 19. Crea un acrónimo o una abreviatura para el nombre 'Python For Everyone'.
