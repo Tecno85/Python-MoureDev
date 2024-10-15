@@ -129,92 +129,102 @@ print(len(company))
 ultimo_indice = len(company) - 1
 print(ultimo_indice)
 ```
-> Note: `--Ivan` es un desarrollador excelente.
 
-**1.  Qué carácter está en el índice 10 en la cadena "Codificación para todos"**.
+**18.  Qué carácter está en el índice 10 en la cadena "Codificación para todos"**.
 
+```py
 company = "Coding For All"
 
-print(company[10])
-
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
-
-> [!TIP]
-> Helpful advice for doing things better or more easily.
-
-> [!IMPORTANT]
-> Helpful advice for doing things better or more easily.
-
+print(company[10]) # Imprime: 
 
 # El caracter que se encuentra en el indice 10 es un espacio en blanco.
+```
 
-# 19. Crea un acrónimo o una abreviatura para el nombre 'Python For Everyone'.
+**19. Crea un acrónimo o una abreviatura para el nombre `'Python For Everyone'`**.
 
+```py
 nombre = "Python For Everyone"
 
 print(nombre.replace("Python For Everyone", "EveryForPy"))
+# Imprime: EveryForPy
+```
 
-# 20. Utilice el índice para determinar la posición de la primera aparición de C en Coding For All.
+**20. Utilice el índice para determinar la posición de la primera aparición de `C` en `Coding For All`.**
 
+```py
 company = "Coding For All"
 index_of_C = company.find("C")
 print(index_of_C)
+# Imprime: 0, la "C" está en el primer índice.
+```
 
-# 21. Utilice index para determinar la posición de la primera aparición de F en Coding For All.
+**21. Utilice index para determinar la posición de la primera aparición de `F` en `Coding For All`**.
 
+```py
 company = "Coding For All"
 index_of_F = company.find("F")
 print(index_of_F)
+# Imprime: 7
+```
 
-# 22. Utilice rfind para determinar la posición de la última aparición de l en Codificación para todas las personas.
+**22. Utilice `rfind` para determinar la posición de la última aparición de `l` en `Coding For All`**.
 
+```py
 company = "Coding For All"
 last_l_index = company.rfind("l")
 print(last_l_index)
+# Imprime: 13
+```
 
-# 23. Use index o find para encontrar la posición de la primera aparición de la palabra 'porque' en la siguiente oración:
+**23. Use `index `o `find` para encontrar la posición de la primera aparición de la palabra `'porque'` en la siguiente oración**:
 
+```py
 # Solución 1:
 sentence = "No se puede terminar una oración con porque porque porque es una conjunción"
 first_word = sentence.index("porque")
 print(first_word)
+# Imprime: 37
 
 # Solución 2:
 first_word_ = sentence.find("porque")
 print(first_word_)
+# Imprime: 37
+```
 
-# 24. Use rindex para encontrar la posición de la última aparición de la palabra porque en la siguiente oración: 'No puedes terminar una oración con porque porque porque porque es una conjunción'
+**24. Use `rindex` para encontrar la posición de la última aparición de la palabra `'porque'` en la siguiente oración: `'No puedes terminar una oración con porque porque porque porque es una conjunción'`**.
 
+```py
+sentence = "No se puede terminar una oración con porque porque porque es una conjunción"
 # Solución 1:
 last_word = sentence.rfind("porque")
 print(last_word)
+# Imprime: 51
 
 # Solución 2:
 last_word_ = sentence.rindex("porque")
 print(last_word_)
+# Imprime: 51
+```
 
-# 25. Corta la frase "porque porque porque" en la siguiente oración: "No puedes terminar una oración con porque porque porque porque es una conjunción"
+**25. Corta la frase `"porque porque porque"` en la siguiente oración: `"No puedes terminar una oración con porque porque porque porque es una conjunción"`**.
 
+```py
 # Solución 1:
-sentence = (
-    "No puedes terminar una oración con porque porque porque porque es una conjunción"
-)
+sentence = ("No puedes terminar una oración con porque porque porque porque es una conjunción")
 antes, separador, despues = sentence.partition("porque porque porque porque")
 print(antes.strip() + " " + despues.strip())
+# imprime: No puedes terminar una oración con es una conjunción
 
 # Solución 2:
-sentence = (
-    "No puedes terminar una oración con porque porque porque porque es una conjunción"
-)
-new_sentence = sentence.replace("porque porque porque porque",
-                                "").replace("  ", " ")
+sentence = ("No puedes terminar una oración con porque porque porque porque es una conjunción")
+new_sentence = sentence.replace("porque porque porque porque","").replace("  ", " ")
 print(new_sentence.strip())
+# imprime: No puedes terminar una oración con es una conjunción
+```
 
-# 26. Halla la posición de la primera aparición de la palabra 'porque' en la siguiente oración: 'No puedes terminar una oración con porque porque porque porque es una conjunción'
+**26. Halla la posición de la primera aparición de la palabra `'porque'` en la siguiente oración: `'No puedes terminar una oración con porque porque porque porque es una conjunción'`**.
 
+```py
 # Solución 1:
 sentence = (
     "No puedes terminar una oración con porque porque porque porque es una conjunción"
@@ -225,6 +235,7 @@ print(new_posicion)
 # Solución 2:
 new_posicion = sentence.find("porque")
 print(new_posicion)
+```
 
 # 27. Corta la frase "porque porque porque" en la siguiente oración: "No puedes terminar una oración con porque porque porque porque es una conjunción"
 
@@ -325,3 +336,16 @@ print(
 print(f"{x} % {y} = {x % y}")  # Método f-string
 print("{} // {} = {}".format(x, y, x // y))  # Método str.format
 print("%d ** %d = %d" % (x, y, x**y))  # Método interpolacion usando operador %
+
+
+
+
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+
+> [!IMPORTANT]
+>
+
+> [!WARNING]
+> Este es un ejemplo
+
+> Note: `--Ivan` es un desarrollador excelente.
